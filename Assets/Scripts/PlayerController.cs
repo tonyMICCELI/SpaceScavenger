@@ -5,35 +5,29 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
-    private bool isMoving;
-    private Vector2 lastMove;
+    public Camera cam;
+    public Vector2 mousePos;
     public Rigidbody2D rb;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    Vector2 movement;
+    public Vector2 MousePos;
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
     }
 
-    void Move()
+    void FixedUpdate()
     {
-        isMoving = false;
-        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
-        {
-            transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
-            isMoving = true;
-            lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
-        }
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
-        if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
-        {
-            transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
-            isMoving = true;
-            lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical"));
-        }
+        Vector2 lookDir = MousePos - rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
+
     }
 }
