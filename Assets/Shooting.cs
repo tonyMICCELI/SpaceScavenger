@@ -19,14 +19,18 @@ public class Shooting : MonoBehaviour
             shoot();
         }
     }
+   
 
     void shoot()
     {
         GameObject laser = Instantiate(laserPrefab, firePoint.position, firePoint.rotation);
         GameObject laser1 = Instantiate(laserPrefab1, firePoint1.position, firePoint1.rotation);
+
         Rigidbody2D rb = laser.GetComponent<Rigidbody2D>();
         Rigidbody2D rb1 = laser1.GetComponent<Rigidbody2D>();
+
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         rb1.AddForce(firePoint1.up * bulletForce, ForceMode2D.Impulse);
     }
+    
 }
