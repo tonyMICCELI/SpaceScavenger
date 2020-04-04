@@ -30,4 +30,12 @@ public class PlayerController : MonoBehaviour
         rb.rotation = angle;
 
     }
+
+    private void OnTriggerEnter2D(Collider2D objCollider)
+    {
+        if (objCollider.gameObject.CompareTag("testObject"))
+        {
+            Destroy(objCollider.gameObject);
+        }
+    }
 }
