@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class hitEffect : MonoBehaviour
 {
+    public GameObject impact;
     void OnCollisionEnter2D(Collision2D collision)
     {
+        GameObject effect = Instantiate(impact, transform.position, Quaternion.identity);
+        Destroy(effect, 1f);
         Destroy(gameObject);
     }
 }
