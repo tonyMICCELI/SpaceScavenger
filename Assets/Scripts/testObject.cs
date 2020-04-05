@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Metal : Items
+public class testObject : Items
 {
-    public Sprite metalSprite;
+    public Sprite testObjectSprite;
 }

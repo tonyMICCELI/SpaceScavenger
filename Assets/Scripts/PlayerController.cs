@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D objCollider)
     {
-        if (objCollider.gameObject.CompareTag("testObject"))
+        if (objCollider.gameObject.CompareTag("Metal") || objCollider.gameObject.CompareTag("testObject"))
         {
             Destroy(objCollider.gameObject);
         }
