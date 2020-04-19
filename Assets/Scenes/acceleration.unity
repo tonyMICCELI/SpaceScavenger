@@ -210,16 +210,6 @@ PrefabInstance:
       propertyPath: timeAcceleration
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4395423761915604893, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4395423761915604893, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
-        type: 3}
-      propertyPath: accelCoolDown
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee, type: 3}
 --- !u!1001 &1311134954

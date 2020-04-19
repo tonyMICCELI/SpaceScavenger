@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movement;
     public Vector2 MousePos;
-    public float accelCoolDown;
-    private bool enableAccel;
 
 
     // Update is called once per frame
@@ -33,7 +31,7 @@ public class PlayerController : MonoBehaviour
         Vector2 lookDir = MousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
-        if (Input.GetButtonDown("Acceleration") && enableAccel == true)
+        if (Input.GetButtonDown("Acceleration"))
         {
             acceleration();
         }
@@ -44,19 +42,13 @@ public class PlayerController : MonoBehaviour
     {
         moveSpeed += 10;
         timer = 0.0f;
-        enableAccel = false;
     }
     void timerAcceleration()
     {
         timer += Time.deltaTime;
         if (timer > timeAcceleration)
         {
-            moveSpeed = 5f;
+            moveSpeed = 5;
         }
-        if(timer > accelCoolDown)
-        {
-            enableAccel = true;
-        }
-
     }
 }
