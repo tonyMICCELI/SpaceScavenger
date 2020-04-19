@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
     public Vector2 MousePos;
     public float accelCoolDown;
     private bool enableAccel = true;
-
+    public bool enableDash = true;
+    public float timer = 0.0f;
+    public float dashCoolDown = 5f;
 
     // Update is called once per frame
     void Update()
@@ -38,7 +40,11 @@ public class PlayerController : MonoBehaviour
             acceleration();
         }
         timerAcceleration();
-
+        if (Input.GetKeyDown(KeyCode.Space) && enableDash == true)
+        {
+            dash();
+        }
+        timerDash();
     }
 
 
@@ -50,6 +56,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+     
 
     void acceleration()
     {
@@ -69,5 +77,21 @@ public class PlayerController : MonoBehaviour
             enableAccel = true;
         }
     }
+    void dash()
+    {
+        rb.position = MousePos;
+        timer = 0.0f;
+        enableDash = false;
+    }
+    void timerDash()
+    {
+        timer += Time.deltaTime;
+        if (timer > dashCoolDown)
+        {
+            enableDash = true;
+        }
+    }
 }
+
+    
 
