@@ -12,20 +12,20 @@ public class Missile : MonoBehaviour
     public float missileSpeed;
     void Update()
     {
-        if (Input.GetButtonDown("Missile"))
+        if (Input.GetButtonDown("Missile"))//si le bouton associé a Missile est appuyé
         {
             missile();
         }
     }
     void missile()
     {
-        GameObject missile = Instantiate(missilePrefab, missileLauncher.position, missileLauncher.rotation);
+        GameObject missile = Instantiate(missilePrefab, missileLauncher.position, missileLauncher.rotation);// on créé un missile, son apparence est missilePrefab, il est créé a la position du missileLauncher, et à l'angle du missileLauncher
         GameObject missile1 = Instantiate(missilePrefab1, missileLauncher1.position, missileLauncher1.rotation);
 
-        Rigidbody2D rb = missile.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = missile.GetComponent<Rigidbody2D>(); //on en fait des Rigidbody pour gérer les colisions
         Rigidbody2D rb1 = missile1.GetComponent<Rigidbody2D>();
 
-        rb.AddForce(missileLauncher.up * missileSpeed, ForceMode2D.Impulse);
+        rb.AddForce(missileLauncher.up * missileSpeed, ForceMode2D.Impulse); // on leur donne une vitesse
         rb1.AddForce(missileLauncher1.up * missileSpeed, ForceMode2D.Impulse);
     }
 }

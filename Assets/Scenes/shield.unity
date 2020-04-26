@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &25628412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4398245123801557555, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+    type: 3}
+  m_PrefabInstance: {fileID: 992747077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &25965391 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4398245124051831975, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+    type: 3}
+  m_PrefabInstance: {fileID: 992747077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &78702089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409,7 +421,8 @@ PrefabInstance:
       propertyPath: accelCoolDown
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4398245124300526160, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee, type: 3}
 --- !u!1001 &1644177125
 PrefabInstance:
@@ -567,6 +580,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 992747077}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2061901890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061901889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6325b4d970d495341b069a545a628c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 25965391}
+  firePoint1: {fileID: 25628412}
+  laserPrefab: {fileID: 796358955756819962, guid: 1fce4d70d8ecb9a4fa16bad353865299,
+    type: 3}
+  laserPrefab1: {fileID: 796358955756819962, guid: 1fce4d70d8ecb9a4fa16bad353865299,
+    type: 3}
+  bulletForce: 15
 --- !u!1001 &6655697270268419230
 PrefabInstance:
   m_ObjectHideFlags: 0
