@@ -15,5 +15,30 @@ public class Items : MonoBehaviour
         {
             ScoreManager.instance.ChangeScoreTestObject();
         }
+
+        if (playerCollider.gameObject.CompareTag("Player") && this.gameObject.CompareTag("Wheel"))
+        {
+            ScoreManager.instance.ChangeScoreWheel();
+        }
+
+        if (playerCollider.gameObject.CompareTag("Player") && this.gameObject.CompareTag("Panel"))
+        {
+            ScoreManager.instance.ChangeScorePanel();
+        }
+
+        if (playerCollider.gameObject.CompareTag("Player") && this.gameObject.CompareTag("Gas"))
+        {
+            ScoreManager.instance.ChangeScoreGas();
+        }
+
+        if (playerCollider.gameObject.CompareTag("Player") && this.gameObject.CompareTag("Plastic"))
+        {
+            ScoreManager.instance.ChangeScorePlastic();
+        }
+
+        if (playerCollider.gameObject.CompareTag("Player") && this.gameObject.CompareTag("Satellite"))
+        {
+            ScoreManager.instance.ChangeScoreSatellite();
+        }
     }
 }

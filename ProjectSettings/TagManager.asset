@@ -6,6 +6,11 @@ TagManager:
   tags:
   - testObject
   - Metal
+  - Plastic
+  - Panel
+  - Gas
+  - Wheel
+  - Satellite
   layers:
   - Default
   - TransparentFX
