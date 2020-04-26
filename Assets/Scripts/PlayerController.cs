@@ -9,11 +9,12 @@ public class PlayerController : MonoBehaviour
     public float timeAcceleration;
     public Camera cam;
     public Rigidbody2D rb;
-    Vector2 movement;
+    private Vector2 movement;
     public Vector2 MousePos;
     public float accelCoolDown;
     private bool enableAccel = true;
 
+    
 
     // Update is called once per frame
     void Update()
@@ -26,10 +27,10 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); //Met à jour la position du vaisseau 
-
+        
         Vector2 lookDir = MousePos - rb.position; //Vecteur entre le vaisseau et le pointeur de souris, soit la direction ou doit poiter le nez du vaisseau
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //angle angle entre l'axe horizontal et lookdir, correspondant à la direction dans laquelle doit etre le vaisseau
-        rb.rotation = angle; //roatation du vaisseau = angle entre l'axe horizontal et lookdir
+        rb.rotation = angle; //rotation du vaisseau = angle entre l'axe horizontal et lookdir
         if (Input.GetButtonDown("Acceleration") && enableAccel == true) // Si le bouton correspondant à l'acceleration est apuyé et que le cool down de la compétecnce est fini
         {
             acceleration();
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
         timerAcceleration();
 
     }
+    
     void acceleration() //fonction permettant l'acceleration du vaisseau
     {
         moveSpeed += 10; // la vitesse augmente de 10
