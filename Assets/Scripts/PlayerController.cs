@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
             || objCollider.gameObject.CompareTag("Panel") || objCollider.gameObject.CompareTag("Plastic") 
             || objCollider.gameObject.CompareTag("Gas") || objCollider.gameObject.CompareTag("Satellite"))
         {
+            FindObjectOfType<AudioManager>().Play("Collect");
             Destroy(objCollider.gameObject);
         }
     }
