@@ -50,8 +50,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D objCollider)
     {
-        if (objCollider.gameObject.CompareTag("Metal") || objCollider.gameObject.CompareTag("testObject"))
+        if (objCollider.gameObject.CompareTag("Metal") || objCollider.gameObject.CompareTag("testObject") || objCollider.gameObject.CompareTag("Wheel")
+            || objCollider.gameObject.CompareTag("Panel") || objCollider.gameObject.CompareTag("Plastic") 
+            || objCollider.gameObject.CompareTag("Gas") || objCollider.gameObject.CompareTag("Satellite"))
         {
+            FindObjectOfType<AudioManager>().Play("Collect");
             Destroy(objCollider.gameObject);
         }
     }
