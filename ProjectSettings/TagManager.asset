@@ -12,6 +12,7 @@ TagManager:
   - Wheel
   - Satellite
   - Monster
+  - Weapon
   layers:
   - Default
   - TransparentFX

@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
             acceleration();
         }
         timerAcceleration();
-        if (Input.GetKeyDown(KeyCode.Space) && enableDash == true)
+        if (Input.GetButtonDown("Dash") && enableDash == true)
         {
             dash();
         }

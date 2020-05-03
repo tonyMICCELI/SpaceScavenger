@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1496493558205365105}
   - component: {fileID: 1496493558205365110}
   - component: {fileID: 1496493558205365111}
+  - component: {fileID: 4758384106417025171}
   m_Layer: 0
   m_Name: MonsterBasicTest
   m_TagString: Monster
@@ -202,6 +203,7 @@ MonoBehaviour:
   moveSpeed: 3
   xlim: 1
   ylim: 1
+  patrolReload: 1
 --- !u!58 &1496493558205365111
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -218,3 +220,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 16
+--- !u!114 &4758384106417025171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496493558205365117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1a0cb3feda21648be2e8e2da6aed57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detecMonster: {fileID: 1496493558205365111}
+  laser: {fileID: 2715499040337505429, guid: 1fce4d70d8ecb9a4fa16bad353865299, type: 3}
+  missile: {fileID: 8331596538174466902, guid: 8668b039c9d51f546bd8ea0f3c54ad0f, type: 3}
