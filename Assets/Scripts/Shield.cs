@@ -22,7 +22,7 @@ public class Shield : MonoBehaviour
             activate();
         }
         timer1();
-        shield.transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime);
+        shield.transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime/10);
         
     }
     void activate()
