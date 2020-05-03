@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,8 +13,12 @@ public class PlayerController : MonoBehaviour
     public Vector2 MousePos;
     public float accelCoolDown;
     private bool enableAccel = true;
+    public bool enableDash = true;
+    public float dashCoolDown = 5f;
+
 
     
+
 
     // Update is called once per frame
     void Update()
@@ -36,9 +40,32 @@ public class PlayerController : MonoBehaviour
             acceleration();
         }
         timerAcceleration();
-
+        if (Input.GetKeyDown(KeyCode.Space) && enableDash == true)
+        {
+            dash();
+        }
+        timerDash();
     }
-    
+
+
+    private void OnTriggerEnter2D(Collider2D objCollider)
+    {
+        if (objCollider.gameObject.CompareTag("Metal") || objCollider.gameObject.CompareTag("testObject") || objCollider.gameObject.CompareTag("Wheel")
+            || objCollider.gameObject.CompareTag("Panel") || objCollider.gameObject.CompareTag("Plastic") 
+            || objCollider.gameObject.CompareTag("Gas") || objCollider.gameObject.CompareTag("Satellite"))
+        {
+            FindObjectOfType<AudioManager>().Play("Collect");
+            Destroy(objCollider.gameObject);
+        }
+    }
+
+
+
+
+     
+
+
+
     void acceleration() //fonction permettant l'acceleration du vaisseau
     {
         moveSpeed += 10; // la vitesse augmente de 10
@@ -57,4 +84,21 @@ public class PlayerController : MonoBehaviour
             enableAccel = true; //on permet de réutiliser la compétence
         }
     }
+    void dash()
+    {
+        rb.position = MousePos;
+        timer = 0.0f;
+        enableDash = false;
+    }
+    void timerDash()
+    {
+        timer += Time.deltaTime;
+        if (timer > dashCoolDown)
+        {
+            enableDash = true;
+        }
+    }
 }
+
+    
+
