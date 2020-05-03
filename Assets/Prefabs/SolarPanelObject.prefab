@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 195b37a04befb7744a78238b9fd5d5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  glolight: {fileID: 3849459729028491673, guid: 6b44e9f7ac13d7e48adcdc762ae52e70,
+    type: 3}
   panelSprite: {fileID: 21300000, guid: 636f075e218d93d45a5511ca3870b018, type: 3}
 --- !u!60 &2545421359015286438
 PolygonCollider2D:
