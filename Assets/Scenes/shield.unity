@@ -591,8 +591,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fa9457613040648b41975044aee503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldPrefab: {fileID: 8591821209368680808, guid: 0574162c713b9dd4ca1a3dc3d240be21,
-    type: 3}
-  target: {fileID: 2061901889}
-  timeShield: 2
-  shieldCoolDown: 5
+  vaisseau: {fileID: 2061901889}
+  shield: {fileID: 8591821209368680808, guid: 0574162c713b9dd4ca1a3dc3d240be21, type: 3}
