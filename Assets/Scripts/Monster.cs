@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public Rigidbody2D rb;
     public int moveSpeed;
     float xrnd;

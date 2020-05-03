@@ -121,15 +121,15 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &25628412 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4398245123801557555, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+--- !u!60 &55156113 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7201225574136463029, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
     type: 3}
   m_PrefabInstance: {fileID: 992747077}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &25965391 stripped
+--- !u!4 &55156116 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4398245124051831975, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+  m_CorrespondingSourceObject: {fileID: 8763105010837689904, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
     type: 3}
   m_PrefabInstance: {fileID: 992747077}
   m_PrefabAsset: {fileID: 0}
@@ -213,12 +213,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 2061901896}
+      objectReference: {fileID: 55156116}
     - target: {fileID: 4929952616030891850, guid: 6e381042e57217542b9ab757e982dd3f,
         type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 55156116}
     - target: {fileID: 4929952616030891850, guid: 6e381042e57217542b9ab757e982dd3f,
         type: 3}
       propertyPath: m_Enabled
@@ -293,6 +293,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 368379037512638093, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: missileColider
+      value: 
+      objectReference: {fileID: 8331596538174466902, guid: 8668b039c9d51f546bd8ea0f3c54ad0f,
+        type: 3}
+    - target: {fileID: 368379037512638093, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: shipCollider
+      value: 
+      objectReference: {fileID: 55156113}
+    - target: {fileID: 368379037512638093, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: missileCollider
+      value: 
+      objectReference: {fileID: 8331596538174466902, guid: 8668b039c9d51f546bd8ea0f3c54ad0f,
+        type: 3}
     - target: {fileID: 4395423761915604832, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
         type: 3}
       propertyPath: m_Name
@@ -393,12 +410,28 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 2061901889}
+      objectReference: {fileID: 0}
     - target: {fileID: 4395423761915604893, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
         type: 3}
       propertyPath: rb
       value: 
-      objectReference: {fileID: 2061901892}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003054357193072352, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1830759169}
+    - target: {fileID: 9119673623432054961, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: shipCollider
+      value: 
+      objectReference: {fileID: 55156113}
+    - target: {fileID: 9119673623432054961, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: laserCollider
+      value: 
+      objectReference: {fileID: 2715499040337505429, guid: 1fce4d70d8ecb9a4fa16bad353865299,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 4398245124300526160, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee, type: 3}
@@ -558,57 +591,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2061901889 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4395423761915604832, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
-    type: 3}
-  m_PrefabInstance: {fileID: 992747077}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2061901890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061901889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6325b4d970d495341b069a545a628c51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 25965391}
-  firePoint1: {fileID: 25628412}
-  laserPrefab: {fileID: 796358955756819962, guid: 1fce4d70d8ecb9a4fa16bad353865299,
-    type: 3}
-  laserPrefab1: {fileID: 796358955756819962, guid: 1fce4d70d8ecb9a4fa16bad353865299,
-    type: 3}
-  bulletForce: 15
---- !u!50 &2061901892 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 4395423761915604895, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
-    type: 3}
-  m_PrefabInstance: {fileID: 992747077}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2061901896 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4395423761915604834, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
-    type: 3}
-  m_PrefabInstance: {fileID: 992747077}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2061901897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061901889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fa9457613040648b41975044aee503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shieldPrefab: {fileID: 8591821209368680808, guid: 0574162c713b9dd4ca1a3dc3d240be21,
-    type: 3}
-  target: {fileID: 2061901889}
-  timeShield: 2
-  shieldCoolDown: 5

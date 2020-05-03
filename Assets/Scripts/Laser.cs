@@ -14,7 +14,7 @@ public class Laser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1")) //si le bouton associé a Fire1 est appuyé
+        if (Input.GetButtonDown("Fire1")) //si le bouton associé a Fire1 est appuyé
         {
             shoot();
         }

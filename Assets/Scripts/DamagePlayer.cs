@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float life;
+    public float MonsterDamage;
    
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(life<0)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-
+        if (collision.gameObject.CompareTag("Monster"))
+        {
+            life -= MonsterDamage * Time.deltaTime;
+        }
     }
 }
