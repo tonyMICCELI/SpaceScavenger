@@ -111,4 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65be45bfb8cf5704b8b4c1f13a179ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  glolight: {fileID: 0}
   plasticSprite: {fileID: 21300000, guid: 6bdfd9af5aa5d6446ae9dbe40355df3c, type: 3}
