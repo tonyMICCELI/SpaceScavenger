@@ -9,7 +9,10 @@ public class Items : MonoBehaviour
     public GameObject glolight;
 
 
-
+    private void Start()
+    {
+        Instantiate(glolight, new Vector3(300.0f, 300.0f, 1f), Quaternion.identity);
+    }
     void OnMouseOver()
     {
         transform.Rotate(Vector3.forward * -speedRotate * Time.deltaTime);
