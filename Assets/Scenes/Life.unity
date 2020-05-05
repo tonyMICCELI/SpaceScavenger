@@ -213,6 +213,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 6445144004054449751}
+    - target: {fileID: 4929952616030891850, guid: 6e381042e57217542b9ab757e982dd3f,
+        type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 6445144004054449751}
     - target: {fileID: 4929952616305844235, guid: 6e381042e57217542b9ab757e982dd3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -520,6 +525,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 20
   MonsterDamage: 10
+--- !u!95 &1959545174442738613
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959545174442738611}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 546fad37c7841c845a8d2f28d7605a89, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2372567726834739303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -527,6 +551,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4313531668435037140, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
         type: 3}
       propertyPath: m_Name
@@ -537,6 +565,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 55235659}
+    - target: {fileID: 8003054357193072352, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: engine
+      value: 
+      objectReference: {fileID: 1959545174442738613}
     - target: {fileID: 8763105010837689904, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
         type: 3}
       propertyPath: m_LocalPosition.x

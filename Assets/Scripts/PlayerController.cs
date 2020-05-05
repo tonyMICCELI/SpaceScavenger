@@ -15,17 +15,20 @@ public class PlayerController : MonoBehaviour
     private bool enableAccel = true;
     public bool enableDash = true;
     public float dashCoolDown = 5f;
-
-
+    public Animator engine;
+    private Vector2 isMoving = new Vector2(0.01f, 0.01f);
     
 
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         movement.x = Input.GetAxisRaw("Horizontal");  //mouvements du vaisseau selon l'axe x   
         movement.y = Input.GetAxisRaw("Vertical");    //mouvemnts du vaisseau selon l'axe y
         MousePos = cam.ScreenToWorldPoint(Input.mousePosition); //récupère les coordonnées de la souris sur l'écran et les convertie en coordonnées unity 
+        engine.SetFloat("SpeedX", Mathf.Abs(movement.x*moveSpeed));
+        engine.SetFloat("SpeedY", Mathf.Abs(movement.y*moveSpeed));
+
     }
 
     void FixedUpdate()
