@@ -16,9 +16,8 @@ public class PlayerController : MonoBehaviour
     public bool enableDash = true;
     public float dashCoolDown = 5f;
     public Animator engine;
-    private Vector2 isMoving = new Vector2(0.01f, 0.01f);
-    
 
+    
 
     // Update is called once per frame
     void Update()
