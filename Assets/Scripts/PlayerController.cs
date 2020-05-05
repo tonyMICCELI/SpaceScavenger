@@ -16,13 +16,8 @@ public class PlayerController : MonoBehaviour
     public bool enableDash = true;
     public float dashCoolDown = 5f;
     public Animator engine;
-    public GameObject engineLight;
-    private GameObject runningLight;
 
-    private void Start()
-    {
-        runningLight = Instantiate(engineLight, transform.position, Quaternion.identity);
-    }
+    
 
     // Update is called once per frame
     void Update()
