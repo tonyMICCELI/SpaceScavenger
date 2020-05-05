@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
    public void Play()
     {
         SceneManager.LoadScene(level);
+        FindObjectOfType<AudioManager>().Play("Launching");
     }
 
    public void Exit()

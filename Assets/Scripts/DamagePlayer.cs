@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamagePlayer : MonoBehaviour
 {
     public float life;
     public float MonsterDamage;
-   
+    public string level;
 
     // Update is called once per frame
     void Update()
     {
         if(life<0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(level);
         }
     }
     private void OnCollisionStay2D(Collision2D collision)

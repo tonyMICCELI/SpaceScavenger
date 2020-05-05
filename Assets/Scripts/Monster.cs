@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    private Transform target;
+    public Transform target;
     public Rigidbody2D rb;
     public int moveSpeed;
     float xrnd;
@@ -32,6 +32,7 @@ public class Monster : MonoBehaviour
     {
         if (playerCollider.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("Monster");
             rb.velocity = new Vector2(0.0f, 0.0f);
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); 
         }

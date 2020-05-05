@@ -5,13 +5,12 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class Items : MonoBehaviour
 {
-    private int speedRotate = 120;
+    private int speedRotate = 90;
     public GameObject glolight;
 
 
     private void Start()
     {
-        Instantiate(glolight, new Vector3(300.0f, 300.0f, 1f), Quaternion.identity);
     }
     void OnMouseOver()
     {

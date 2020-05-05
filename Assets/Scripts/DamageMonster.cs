@@ -18,6 +18,7 @@ public class DamageMonster : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
+            FindObjectOfType<AudioManager>().Play("Monster");
             Destroy(gameObject);
         }
     }
