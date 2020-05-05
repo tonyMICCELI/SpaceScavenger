@@ -235,6 +235,7 @@ MonoBehaviour:
   accelCoolDown: 5
   enableDash: 1
   dashCoolDown: 5
+  engine: {fileID: 0}
 --- !u!60 &5144569401170201778
 PolygonCollider2D:
   m_ObjectHideFlags: 0
