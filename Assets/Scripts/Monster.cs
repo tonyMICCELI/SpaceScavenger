@@ -11,8 +11,6 @@ public class Monster : MonoBehaviour
     float yrnd;
     public float xlim, ylim;
     public float patrolReload;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,17 +33,8 @@ public class Monster : MonoBehaviour
         if (playerCollider.gameObject.CompareTag("Player"))
         {
             rb.velocity = new Vector2(0.0f, 0.0f);
-            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-            shoot();
+            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); 
         }
-    }
-    public Transform get_target()
-    {
-        return target;
-    }
-    public virtual void shoot() 
-    {
-
     }
 
     public void patrol()
