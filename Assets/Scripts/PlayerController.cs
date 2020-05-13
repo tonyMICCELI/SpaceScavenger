@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
         MousePos = cam.ScreenToWorldPoint(Input.mousePosition); //récupère les coordonnées de la souris sur l'écran et les convertie en coordonnées unity 
         engine.SetFloat("SpeedX", Mathf.Abs(movement.x*moveSpeed));
         engine.SetFloat("SpeedY", Mathf.Abs(movement.y*moveSpeed));
-
     }
 
     void FixedUpdate()
