@@ -203,6 +203,11 @@ MonoBehaviour:
   xlim: 1
   ylim: 1
   patrolReload: 1
+  firePoint: {fileID: 0}
+  shootPrefab: {fileID: 0}
+  bulletForce: 0
+  monsterCollider: {fileID: 0}
+  shootCollider: {fileID: 0}
 --- !u!58 &6824600650069454769
 CircleCollider2D:
   m_ObjectHideFlags: 0
