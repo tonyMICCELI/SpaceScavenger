@@ -11,6 +11,11 @@ public class Monster : MonoBehaviour
     float yrnd;
     public float xlim, ylim;
     public float patrolReload;
+    public Transform firePoint;
+    public GameObject shootPrefab;
+    public float bulletForce;
+    public Collider2D monsterCollider;
+    public Collider2D shootCollider;
 
 
     // Start is called before the first frame update
@@ -23,6 +28,7 @@ public class Monster : MonoBehaviour
     void Update()
     {
         moving();
+        Physics2D.IgnoreCollision(monsterCollider, shootCollider);
     }
 
     public void moving()
@@ -45,7 +51,10 @@ public class Monster : MonoBehaviour
     }
     public virtual void shoot() 
     {
-
+        GameObject shoot = Instantiate(shootPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rbShoot = shoot.GetComponent<Rigidbody2D>();
+        Vector2 rbForce = get_target().position -firePoint.position;
+        rbShoot.AddForce(rbForce * bulletForce, ForceMode2D.Impulse);
     }
 
     public void patrol()

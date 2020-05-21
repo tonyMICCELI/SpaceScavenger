@@ -13,8 +13,7 @@ TagManager:
   - Satellite
   - Monster
   - Weapon
-  - MonsterGas
-  - MonsterPneu
+  - MonsterShoot
   layers:
   - Default
   - TransparentFX
