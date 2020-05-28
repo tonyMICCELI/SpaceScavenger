@@ -95,6 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsSpawned: {fileID: 0}
-  nbrObjects: 42
-  xlim: 20
-  ylim: 20
+  nbrObjects: 30
+  xlim: 88
+  ylim: 88
