@@ -16,6 +16,7 @@ public class Laser : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1")) //si le bouton associé a Fire1 est appuyé
         {
+            FindObjectOfType<AudioManager>().Play("Laser");
             shoot();
         }
     }

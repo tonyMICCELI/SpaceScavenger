@@ -22,6 +22,7 @@ public class ScoreManager : MonoBehaviour
     int scorePlastic;
     int scoreSatellite;
     public int winCondition;
+    public int winCondition2;
     public string level;
 
     // Start is called before the first frame update
@@ -35,14 +36,15 @@ public class ScoreManager : MonoBehaviour
         textWheel.text = scoreWheel.ToString() + " / " + winCondition.ToString();
         textObject.text = scoreMetal.ToString() + " / " + winCondition.ToString();
         textPanel.text = scorePanel.ToString() + " / " + winCondition.ToString();
-        textGas.text = scoreGas.ToString() + " / " + winCondition.ToString();
-        textPlastic.text = scorePlastic.ToString() + " / " + winCondition.ToString();
-        textSatellite.text = scoreSatellite.ToString() + " / " + winCondition.ToString();
+        textGas.text = scoreGas.ToString() + " / " + winCondition2.ToString();
+        textPlastic.text = scorePlastic.ToString() + " / " + winCondition2.ToString();
+        textSatellite.text = scoreSatellite.ToString() + " / " + winCondition2.ToString();
     }
 
     private void Update()
     {
-        if(scoreObject == winCondition )
+        if(scoreObject >= winCondition && scoreWheel >= winCondition && scoreMetal >= winCondition && scorePanel >= winCondition
+            && scoreGas >= winCondition2 && scorePlastic >= winCondition2 && scoreSatellite >= winCondition2)
         {
             SceneManager.LoadScene(level);
         }
@@ -74,17 +76,17 @@ public class ScoreManager : MonoBehaviour
     public void ChangeScoreGas()
     {
         scoreGas++;
-        textGas.text = scoreGas.ToString() + " / " + winCondition.ToString();
+        textGas.text = scoreGas.ToString() + " / " + winCondition2.ToString();
     }
     public void ChangeScorePlastic()
     {
         scorePlastic++;
-        textPlastic.text = scorePlastic.ToString() + " / " + winCondition.ToString();
+        textPlastic.text = scorePlastic.ToString() + " / " + winCondition2.ToString();
     }
     public void ChangeScoreSatellite()
     {
         scoreSatellite++;
-        textSatellite.text = scoreSatellite.ToString() + " / " + winCondition.ToString();
+        textSatellite.text = scoreSatellite.ToString() + " / " + winCondition2.ToString();
     }
 
 }

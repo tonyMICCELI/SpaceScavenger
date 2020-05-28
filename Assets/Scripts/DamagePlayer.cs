@@ -1,13 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamagePlayer : MonoBehaviour
 {
     public float life;
     public float maxLife;
     public float MonsterDamage;
+
     public HealthBar healthBar;
+
+    public string level;
+
 
     private void Start()
     {
@@ -19,7 +24,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if(life<0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(level);
         }
     }
     private void OnCollisionStay2D(Collision2D collision)

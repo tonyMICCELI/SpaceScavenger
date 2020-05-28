@@ -15,6 +15,7 @@ public class Missile : MonoBehaviour
     {
         if (Input.GetButtonDown("Missile"))//si le bouton associé a Missile est appuyé
         {
+            FindObjectOfType<AudioManager>().Play("Rocket");
             missile();
         }
     }
