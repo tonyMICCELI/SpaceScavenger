@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4105487663364299304}
   - component: {fileID: 8788663678505761753}
   m_Layer: 0
-  m_Name: SatteliteObject
+  m_Name: ParaboleObject
   m_TagString: Satellite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2800065315223551932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.22, y: 3.38, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
