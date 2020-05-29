@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
     public Vector2 MousePos;
     public float accelCoolDown;
     private bool enableAccel = true;
-    private bool unlockAccel = false;
+    private bool unlockAccel = true;
     public bool enableDash = true;
-    private bool unlockDash = false;
+    private bool unlockDash = true;
     public float dashCoolDown = 5f;
     public Animator engine;
 

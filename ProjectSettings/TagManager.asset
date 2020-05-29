@@ -14,6 +14,8 @@ TagManager:
   - Monster
   - Weapon
   - MonsterShoot
+  - Border
+  - Shield
   layers:
   - Default
   - TransparentFX

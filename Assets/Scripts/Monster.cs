@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public Rigidbody2D rb;
     public int moveSpeed;
     float xrnd;
@@ -45,6 +45,7 @@ public class Monster : MonoBehaviour
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             shoot();
         }
+        
     }
     public Transform get_target()
     {

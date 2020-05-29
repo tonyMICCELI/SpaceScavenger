@@ -14,8 +14,9 @@ public class Shield : MonoBehaviour
     public float timeShield;
     public float shieldCoolDown;
     private GameObject shield;
+    
 
-   
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -45,5 +46,12 @@ public class Shield : MonoBehaviour
     public float getTime()
     {
         return timeShield;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Border"))
+        {
+            Destroy(collision);
+        }
     }
 }
