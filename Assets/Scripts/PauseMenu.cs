@@ -43,4 +43,8 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public bool getBool()
+    {
+        return GameIsPaused;
+    }
 }
