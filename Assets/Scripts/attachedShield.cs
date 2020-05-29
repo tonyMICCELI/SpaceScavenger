@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class attachedShield : MonoBehaviour
 {
-
-    public float timeShield;
+    public Shield shield;
+    private float timeShield;
+    private void Start()
+    {
+        timeShield = shield.getTime();
+    }
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject,timeShield );
+        Destroy(gameObject,timeShield);
     }
 }

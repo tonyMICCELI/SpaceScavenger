@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     public Vector2 MousePos;
     public float accelCoolDown;
     private bool enableAccel = true;
+    private bool unlockAccel = false;
     public bool enableDash = true;
+    private bool unlockDash = false;
     public float dashCoolDown = 5f;
     public Animator engine;
 
@@ -36,12 +38,12 @@ public class PlayerController : MonoBehaviour
         Vector2 lookDir = MousePos - rb.position; //Vecteur entre le vaisseau et le pointeur de souris, soit la direction ou doit poiter le nez du vaisseau
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //angle angle entre l'axe horizontal et lookdir, correspondant à la direction dans laquelle doit etre le vaisseau
         rb.rotation = angle; //rotation du vaisseau = angle entre l'axe horizontal et lookdir
-        if (Input.GetButtonDown("Acceleration") && enableAccel == true) // Si le bouton correspondant à l'acceleration est apuyé et que le cool down de la compétecnce est fini
+        if (Input.GetButtonDown("Acceleration") && enableAccel == true && unlockAccel == true) // Si le bouton correspondant à l'acceleration est apuyé et que le cool down de la compétecnce est fini
         {
             acceleration();
         }
         timerAcceleration();
-        if (Input.GetButtonDown("Dash") && enableDash == true)
+        if (Input.GetButtonDown("Dash") && enableDash == true && unlockDash == true)
         {
             dash();
         }

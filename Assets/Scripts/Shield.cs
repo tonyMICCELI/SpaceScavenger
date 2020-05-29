@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using UnityEngine;
 
 public class Shield : MonoBehaviour
@@ -8,6 +9,7 @@ public class Shield : MonoBehaviour
     public GameObject target;
     private Vector3 targetPosition;
     private bool enable = true;
+    private bool unlock = true;
     private float timer= 0.0f;
     public float timeShield;
     public float shieldCoolDown;
@@ -17,7 +19,7 @@ public class Shield : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetButtonDown("Shield") && enable == true) // Si le bouton correspondant à l'acceleration est apuyé et que le cool down de la compétecnce est fini
+        if (Input.GetButtonDown("Shield") && enable == true && unlock == true) // Si le bouton correspondant à l'acceleration est apuyé et que le cool down de la compétecnce est fini
         {
             activate();
         }
@@ -39,5 +41,9 @@ public class Shield : MonoBehaviour
         {
             enable = true; //on permet de réutiliser la compétence
         }
+    }
+    public float getTime()
+    {
+        return timeShield;
     }
 }

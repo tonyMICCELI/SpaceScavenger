@@ -958,6 +958,16 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1174651449}
+    - target: {fileID: 3546756036875516251, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: timeShield
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546756036875516251, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: shieldCoolDown
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3546756036875516255, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
         type: 3}
       propertyPath: m_Name

@@ -521,8 +521,8 @@ InputManager:
     m_Name: Missile
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: f
-    positiveButton: 
+    negativeButton: 
+    positiveButton: f
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
