@@ -259,3 +259,4 @@ MonoBehaviour:
   laser: {fileID: 5479489060889423224, guid: 1fce4d70d8ecb9a4fa16bad353865299, type: 3}
   missile: {fileID: 811729837892656799, guid: 8668b039c9d51f546bd8ea0f3c54ad0f, type: 3}
   item: {fileID: 4682116547785637531, guid: 1bdcdefb439a401468af62dd4b4cfd37, type: 3}
+  impact: {fileID: 2902347825406084010, guid: c88338dd2c589ab419709e41ad5ae589, type: 3}

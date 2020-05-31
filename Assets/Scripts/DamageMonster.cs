@@ -8,6 +8,7 @@ public class DamageMonster : MonoBehaviour
     public Collider2D laser;
     public Collider2D missile;
     public GameObject item;
+    public GameObject impact;
 
     // Update is called once per frame
     void Update()
@@ -17,9 +18,11 @@ public class DamageMonster : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Weapon"))
+        if (collision.gameObject.CompareTag("Weapon") || collision.gameObject.CompareTag("Shield"))
         {
             Vector3 itemPos = gameObject.transform.position;
+            GameObject effect = Instantiate(impact, transform.position, Quaternion.identity);//on instancie l'annimation à l'endroit de la colision
+            Destroy(effect, 1f);// on détruit l'annimation après 1 seconde
             Destroy(gameObject);
             int nbItems = Random.Range(1, 4);
             for (int i = 0; i < nbItems; i++)

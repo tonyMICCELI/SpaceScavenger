@@ -14,13 +14,19 @@ public class Shield : MonoBehaviour
     public float timeShield;
     public float shieldCoolDown;
     private GameObject shield;
-    
+    public GameObject laser;
+    public GameObject missile;
+
 
 
     // Update is called once per frame
+    private void Update()
+    {
+        Physics2D.IgnoreCollision(shield.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+    }
     void FixedUpdate()
     {
-        if (Input.GetButtonDown("Shield") && enable == true && unlock == true) // Si le bouton correspondant à l'acceleration est apuyé et que le cool down de la compétecnce est fini
+        if (Input.GetButtonDown("Shield") && enable == true && unlock == true) // Si le bouton correspondant au bouclier est apuyé et que le cool down de la compétecnce est fini
         {
             activate();
         }
@@ -46,12 +52,5 @@ public class Shield : MonoBehaviour
     public float getTime()
     {
         return timeShield;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("Border"))
-        {
-            Destroy(collision);
-        }
     }
 }

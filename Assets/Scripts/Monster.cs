@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    private Transform target;
+    protected Transform target;
     public Rigidbody2D rb;
     public int moveSpeed;
     float xrnd;
@@ -14,8 +14,7 @@ public class Monster : MonoBehaviour
     public Transform firePoint;
     public GameObject shootPrefab;
     public float bulletForce;
-    public Collider2D monsterCollider;
-    public Collider2D shootCollider;
+
 
 
     // Start is called before the first frame update
@@ -28,7 +27,7 @@ public class Monster : MonoBehaviour
     void Update()
     {
         moving();
-        Physics2D.IgnoreCollision(monsterCollider, shootCollider);
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), shootPrefab.GetComponent<Collider2D>());
     }
 
     public void moving()
@@ -74,4 +73,5 @@ public class Monster : MonoBehaviour
             yield return new WaitForSeconds(patrolReload);
         }
     }
+    
 }

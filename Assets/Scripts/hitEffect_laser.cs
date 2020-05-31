@@ -5,10 +5,13 @@ using UnityEngine;
 public class hitEffect_laser : MonoBehaviour
 {
     public GameObject impact; //annimation d'impact
+    public GameObject shield;
+    
 
     private void Update()
     {
-        Destroy(gameObject, 5f);
+        Physics2D.IgnoreCollision(shield.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        //Destroy(gameObject, 5f);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {

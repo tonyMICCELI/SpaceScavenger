@@ -1055,8 +1055,18 @@ PrefabInstance:
         type: 3}
       propertyPath: shieldPrefab
       value: 
-      objectReference: {fileID: 5015411973452310132, guid: 0574162c713b9dd4ca1a3dc3d240be21,
+      objectReference: {fileID: 7672082886270808322, guid: 0574162c713b9dd4ca1a3dc3d240be21,
         type: 3}
+    - target: {fileID: 2046529060248475509, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: timeShield
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046529060248475509, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: shieldCoolDown
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2046529060248475511, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
         type: 3}
       propertyPath: pauseMenu

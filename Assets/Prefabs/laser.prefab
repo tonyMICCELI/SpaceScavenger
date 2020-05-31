@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impact: {fileID: 7717726769758531098, guid: 02c478c371d7873428e4cd44b82759da, type: 3}
+  shield: {fileID: 7672082886270808322, guid: 0574162c713b9dd4ca1a3dc3d240be21, type: 3}
 --- !u!1 &9133484695977659773
 GameObject:
   m_ObjectHideFlags: 0

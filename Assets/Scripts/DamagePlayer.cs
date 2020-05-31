@@ -35,6 +35,7 @@ public class DamagePlayer : MonoBehaviour
             healthBar.setHealth(life);
         }
     }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("MonsterShoot"))

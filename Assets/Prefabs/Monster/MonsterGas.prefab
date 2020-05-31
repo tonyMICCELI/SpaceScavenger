@@ -205,9 +205,7 @@ MonoBehaviour:
   patrolReload: 1
   firePoint: {fileID: 0}
   shootPrefab: {fileID: 0}
-  bulletForce: 0
-  monsterCollider: {fileID: 0}
-  shootCollider: {fileID: 0}
+  bulletForce: 3
 --- !u!58 &6824600650069454769
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -240,3 +238,4 @@ MonoBehaviour:
   laser: {fileID: 5479489060889423224, guid: 1fce4d70d8ecb9a4fa16bad353865299, type: 3}
   missile: {fileID: 811729837892656799, guid: 8668b039c9d51f546bd8ea0f3c54ad0f, type: 3}
   item: {fileID: 2400046388986150292, guid: 25d54aa55bf3229408c44ee2bae95b44, type: 3}
+  impact: {fileID: 2902347825406084010, guid: c88338dd2c589ab419709e41ad5ae589, type: 3}
