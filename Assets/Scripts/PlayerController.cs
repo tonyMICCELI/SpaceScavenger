@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     public float moveSpeed;
     private float timer = 0.0f;
     public float timeAcceleration;
@@ -13,13 +14,21 @@ public class PlayerController : MonoBehaviour
     public Vector2 MousePos;
     public float accelCoolDown;
     private bool enableAccel = true;
-    private bool unlockAccel = true;
+    private bool unlockAccel = false;
     public bool enableDash = true;
-    private bool unlockDash = true;
+    private bool unlockDash = false;
     public float dashCoolDown = 5f;
     public Animator engine;
 
-    
+
+
+    void Start()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -53,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D objCollider)
     {
-        if (objCollider.gameObject.CompareTag("Metal") || objCollider.gameObject.CompareTag("testObject") || objCollider.gameObject.CompareTag("Wheel")
+        if (objCollider.gameObject.CompareTag("Metal") || objCollider.gameObject.CompareTag("Cigaret") || objCollider.gameObject.CompareTag("Wheel")
             || objCollider.gameObject.CompareTag("Panel") || objCollider.gameObject.CompareTag("Plastic") 
             || objCollider.gameObject.CompareTag("Gas") || objCollider.gameObject.CompareTag("Satellite"))
         {
@@ -99,6 +108,22 @@ public class PlayerController : MonoBehaviour
         if (timer > dashCoolDown)
         {
             enableDash = true;
+        }
+    }
+
+    public void makeTrueDash()
+    {
+        if (!unlockDash)
+        {
+            unlockDash = true;
+        }
+    }
+
+    public void makeTrueAccel()
+    {
+        if (!unlockAccel)
+        {
+            unlockAccel = true;
         }
     }
 }

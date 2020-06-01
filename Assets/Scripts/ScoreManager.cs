@@ -224,5 +224,18 @@ public class ScoreManager : MonoBehaviour
         scoreSatellite = 0;
     }
 
+    public bool GetBoolLevel1()
+    {
+        return level1;
+    }
 
+    public bool GetBoolLevel2()
+    {
+        return level2;
+    }
+
+    public bool GetBoolLevel3()
+    {
+        return level2;
+    }
 }

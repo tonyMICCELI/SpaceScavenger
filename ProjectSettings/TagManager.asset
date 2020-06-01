@@ -16,6 +16,9 @@ TagManager:
   - MonsterShoot
   - Border
   - Shield
+  - Cigaret
+  - SkillTurbo
+  - SkillDash
   layers:
   - Default
   - TransparentFX
