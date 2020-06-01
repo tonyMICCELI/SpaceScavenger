@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5359907374534913191
+--- !u!1 &2588245648497632548
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5359907374534913185}
-  - component: {fileID: 5359907374534913184}
+  - component: {fileID: 2588245648497632546}
+  - component: {fileID: 2588245648497632547}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: AudioManager 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5359907374534913185
+--- !u!4 &2588245648497632546
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5359907374534913191}
+  m_GameObject: {fileID: 2588245648497632548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5589668, y: -3.4130652, z: -16.416985}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5359907374534913184
+--- !u!114 &2588245648497632547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5359907374534913191}
+  m_GameObject: {fileID: 2588245648497632548}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e202a629f0c94ea41bcd9dda861b71f3, type: 3}
@@ -77,6 +77,12 @@ MonoBehaviour:
   - name: Monster
     clip: {fileID: 8300000, guid: 80741c0eca2ddb24b8ed714ded1f04f1, type: 3}
     volume: 0.265
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dialogue
+    clip: {fileID: 8300000, guid: 792c08cff496fa346b34816c6cb42022, type: 3}
+    volume: 0.121
     pitch: 1
     loop: 0
     source: {fileID: 0}
