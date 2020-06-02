@@ -45,7 +45,7 @@ public class Items : MonoBehaviour
             ScoreManager.instance.ChangeScoreMetal();
         }
 
-        if (playerCollider.gameObject.CompareTag("Player") && this.gameObject.CompareTag("testObject"))
+        if (playerCollider.gameObject.CompareTag("Player") && this.gameObject.CompareTag("Cigaret"))
         {
             ScoreManager.instance.ChangeScoreTestObject();
         }

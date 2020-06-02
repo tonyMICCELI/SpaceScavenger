@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceMuseum.unity
     guid: 355ae808f8ea0584ea5131d61ee78298
+  - enabled: 1
+    path: Assets/Scenes/Cinematique1AvantLevel0.unity
+    guid: 638b4e1240d23ce429c822ac5952e356
+  - enabled: 1
+    path: Assets/Scenes/Level0.unity
+    guid: 371dda9702b47bf4697fbc3d269fb0fb
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: a4424f8a491335d49af53fae3346788d
   m_configObjects: {}
