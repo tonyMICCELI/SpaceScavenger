@@ -6,7 +6,6 @@ public class hitEffect_laser : MonoBehaviour
 {
     public GameObject impact; //annimation d'impact
     public GameObject shield;
-    
 
     void OnCollisionEnter2D(Collision2D collision)
     {
