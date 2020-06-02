@@ -7,10 +7,15 @@ public class boss : Monster
     public Transform firePoint2;
     public Transform firePoint3;
 
+    void Start()
+    {
+        StartCoroutine(patrolRoutine());
+    }
+
     // Update is called once per frame
     void Update()
     {
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), shootPrefab.GetComponent<Collider2D>());
+        
     }
     private void OnTriggerEnter2D(Collider2D playerCollider)
     {
@@ -20,7 +25,6 @@ public class boss : Monster
             shoot(firePoint);
             shoot(firePoint2);
             shoot(firePoint3);
-
         }
     }
     public void shoot(Transform firePoint) 
@@ -29,5 +33,13 @@ public class boss : Monster
         Rigidbody2D rbShoot = shoot.GetComponent<Rigidbody2D>();
         Vector2 rbForce = get_target().position - firePoint.position;
         rbShoot.AddForce(rbForce * bulletForce, ForceMode2D.Impulse);
+    }
+    public override IEnumerator patrolRoutine()
+    {
+        while(true)
+        {
+            patrol();
+            yield return new WaitForSeconds(patrolReload);
+        }
     }
 }

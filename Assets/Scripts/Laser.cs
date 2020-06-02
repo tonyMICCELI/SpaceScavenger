@@ -7,11 +7,10 @@ public class Laser : MonoBehaviour
     public Transform firePoint;
     public Transform firePoint1;
     public GameObject laserPrefab;
-    public GameObject laserPrefab1;
+    public GameObject shield;
 
     public float bulletForce;
     public PauseMenu pauseMenu;
-
     // Update is called once per frame
     void Update()
     {
@@ -20,13 +19,14 @@ public class Laser : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Laser");
             shoot();
         }
+        
     }
    
 
     void shoot()
     {
         GameObject laser = Instantiate(laserPrefab, firePoint.position, firePoint.rotation); // on créé un laser, son apparence est laserPrefab, il est créé a la position du firePoint, et à l'angle du firePoint
-        GameObject laser1 = Instantiate(laserPrefab1, firePoint1.position, firePoint1.rotation);
+        GameObject laser1 = Instantiate(laserPrefab, firePoint1.position, firePoint1.rotation);
 
         Rigidbody2D rb = laser.GetComponent<Rigidbody2D>(); //on prend leur Rigidbody pour gérer les colisions
         Rigidbody2D rb1 = laser1.GetComponent<Rigidbody2D>();

@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private bool unlockDash = true;
     public float dashCoolDown = 5f;
     public Animator engine;
+    public MoveBack moveBack;
+    public boss boss;
 
     
 
@@ -33,8 +35,15 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); //Met à jour la position du vaisseau 
-        
+        Vector2 bossPos = boss.get_rb().position;
+        if(moveBack.get_cloose() == true )
+        {
+            rb.MovePosition(rb.position -(bossPos - rb.position) *10*moveSpeed * Time.fixedDeltaTime);
+        }
+        else
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); //Met à jour la position du vaisseau 
+        }
         Vector2 lookDir = MousePos - rb.position; //Vecteur entre le vaisseau et le pointeur de souris, soit la direction ou doit poiter le nez du vaisseau
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //angle angle entre l'axe horizontal et lookdir, correspondant à la direction dans laquelle doit etre le vaisseau
         rb.rotation = angle; //rotation du vaisseau = angle entre l'axe horizontal et lookdir

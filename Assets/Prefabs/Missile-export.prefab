@@ -293,3 +293,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impact: {fileID: 3620626919247247252, guid: 236635462332c3648a874b7bf5787c67, type: 3}
+  shield: {fileID: 7672082886270808322, guid: 0574162c713b9dd4ca1a3dc3d240be21, type: 3}

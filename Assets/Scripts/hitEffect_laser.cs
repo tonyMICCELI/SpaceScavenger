@@ -8,16 +8,15 @@ public class hitEffect_laser : MonoBehaviour
     public GameObject shield;
     
 
-    private void Update()
-    {
-        Physics2D.IgnoreCollision(shield.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        //Destroy(gameObject, 5f);
-    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+        }
+        if(collision.gameObject.CompareTag("Shield"))
+        {
+            Physics2D.IgnoreCollision(shield.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
         }
         else
         {

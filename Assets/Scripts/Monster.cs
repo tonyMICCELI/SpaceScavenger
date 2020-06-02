@@ -27,7 +27,7 @@ public class Monster : MonoBehaviour
     void Update()
     {
         moving();
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), shootPrefab.GetComponent<Collider2D>());
+        
     }
 
     public void moving()
@@ -43,8 +43,7 @@ public class Monster : MonoBehaviour
             rb.velocity = new Vector2(0.0f, 0.0f);
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             shoot();
-        }
-        
+        } 
     }
     public Transform get_target()
     {
@@ -65,13 +64,17 @@ public class Monster : MonoBehaviour
         rb.velocity = new Vector2(xrnd*moveSpeed/2, yrnd*moveSpeed/2);
     }
     
-    IEnumerator patrolRoutine()
+    public virtual IEnumerator patrolRoutine()
     {
         while (target != GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>())
         {
             patrol();
             yield return new WaitForSeconds(patrolReload);
         }
+    }
+    public Rigidbody2D get_rb()
+    {
+        return rb;    
     }
     
 }

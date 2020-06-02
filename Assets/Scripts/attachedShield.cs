@@ -6,10 +6,7 @@ public class attachedShield : MonoBehaviour
 {
     // public Shield shield;
     public float timeShield;
-    /*private void Start()
-    {
-        timeShield = shield.getTime();
-    }*/
+
     // Update is called once per frame
     void Update()
     {
