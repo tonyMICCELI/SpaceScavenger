@@ -7,6 +7,10 @@ public class hitEffect_laser : MonoBehaviour
     public GameObject impact; //annimation d'impact
     public GameObject shield;
 
+    private void Update()
+    {
+        Destroy(gameObject, 1f);
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -20,7 +24,7 @@ public class hitEffect_laser : MonoBehaviour
         else
         {
             GameObject effect = Instantiate(impact, transform.position, Quaternion.identity);//on instancie l'annimation à l'endroit de la colision
-            Destroy(effect, 1f);// on détruit l'annimation après 1 seconde
+            Destroy(effect, 2f);// on détruit l'annimation après 1 seconde
             Destroy(gameObject);//on détruit le missile
             
         }

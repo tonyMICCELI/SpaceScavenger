@@ -19,6 +19,8 @@ TagManager:
   - Cigaret
   - SkillTurbo
   - SkillDash
+  - Boss
+  - Missile
   layers:
   - Default
   - TransparentFX

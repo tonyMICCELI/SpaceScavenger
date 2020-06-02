@@ -7,7 +7,6 @@ public class Laser : MonoBehaviour
     public Transform firePoint;
     public Transform firePoint1;
     public GameObject laserPrefab;
-    public GameObject shield;
 
     public float bulletForce;
     public PauseMenu pauseMenu;

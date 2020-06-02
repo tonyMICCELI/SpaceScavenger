@@ -9,7 +9,7 @@ public class hitEffect_missile : MonoBehaviour
 
     private void Update()
     {
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 2f);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {

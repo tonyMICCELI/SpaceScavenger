@@ -44,10 +44,17 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 bossPos = boss.get_rb().position;
-        if(moveBack.get_cloose() == true )
+        if(moveBack)
         {
-            rb.MovePosition(rb.position -(bossPos - rb.position) *10*moveSpeed * Time.fixedDeltaTime);
+            if (moveBack.get_cloose() == true)
+            {
+                Vector2 bossPos = boss.get_rb().position;
+                rb.MovePosition(rb.position - (bossPos - rb.position) * 10 * moveSpeed * Time.fixedDeltaTime);
+            }
+            else
+            {
+                rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); //Met à jour la position du vaisseau 
+            }
         }
         else
         {

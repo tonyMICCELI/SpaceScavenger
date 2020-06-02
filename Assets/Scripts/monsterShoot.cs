@@ -16,7 +16,7 @@ public class monsterShoot : MonoBehaviour
         {
             GameObject effect = Instantiate(impact, transform.position, Quaternion.identity);//on instancie l'annimation à l'endroit de la colision
             Destroy(effect, 1f);// on détruit l'annimation après 1 seconde
-            Destroy(gameObject);//on détruit le missile
+            Destroy(gameObject);//on détruit le tir du monstre
         }
 
     }

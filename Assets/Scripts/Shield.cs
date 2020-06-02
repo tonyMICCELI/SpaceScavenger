@@ -14,8 +14,7 @@ public class Shield : MonoBehaviour
     public float timeShield;
     public float shieldCoolDown;
     private GameObject shield;
-    public GameObject laser;
-    public GameObject missile;
+
 
 
 
