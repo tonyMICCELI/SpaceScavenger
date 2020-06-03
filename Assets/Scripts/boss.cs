@@ -7,15 +7,15 @@ public class boss : Monster
     public Transform firePoint2;
     public Transform firePoint3;
 
+
+
     void Start()
     {
         StartCoroutine(patrolRoutine());
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        // Surcharge du Update pour empecher le boss de suivre le joueur
     }
     private void OnTriggerEnter2D(Collider2D playerCollider)
     {

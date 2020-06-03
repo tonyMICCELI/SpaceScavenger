@@ -423,9 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9722e768fbce2048a4ab85a834a5bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impact: {fileID: 2902347825406084010, guid: c88338dd2c589ab419709e41ad5ae589, type: 3}
-  life: 0
-  maxLife: 0
-  MonsterDamage: 0
+  impact: {fileID: 9129320485091443798, guid: 6a166df10cdc6fa43ad8608ed29cd3f3, type: 3}
+  life: 10
+  maxLife: 10
   healthBar: {fileID: 0}
-  level: 

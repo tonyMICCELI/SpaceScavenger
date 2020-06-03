@@ -7,10 +7,9 @@ public class DamageBoss : MonoBehaviour
     public GameObject impact;
     public float life;
     public float maxLife;
-
     public HealthBar healthBar;
+    private GameObject deadBoss;
 
-    public string level;
 
     private void Start()
     {
@@ -23,7 +22,6 @@ public class DamageBoss : MonoBehaviour
         {
             GameObject effect = Instantiate(impact, transform.position, Quaternion.identity);//on instancie l'annimation à l'endroit de la colision
             Destroy(effect, 1f);// on détruit l'annimation après 1 seconde
-            wait();
             Destroy(gameObject);
         }
     }
@@ -39,9 +37,5 @@ public class DamageBoss : MonoBehaviour
             life -= 2f;
             healthBar.setHealth(life);
         }
-    }
-    public virtual IEnumerator wait()
-    {
-        yield return new WaitForSeconds(1);
     }
 }
