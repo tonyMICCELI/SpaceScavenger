@@ -53,8 +53,14 @@ MonoBehaviour:
   winConditionLevel0: 1
   winCondition: 10
   winCondition2: 5
-  level: WinScene
+  switchLevel1: Level1
+  switchLlevel2: Level2
+  switchLlevel3: Level3
+  switchWin: WinScene
   level0: 1
   level1: 0
   level2: 0
   level3: 0
+  isFull: 0
+  goBackHome: {fileID: 0}
+  playerWinner: {fileID: 0}

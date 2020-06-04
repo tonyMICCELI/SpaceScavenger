@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
+    public static Shield instance;
     public GameObject shieldPrefab;
     public GameObject target;
     private Vector3 targetPosition;
     private bool enable = true;
-    private bool unlock = true;
+    private bool unlockShield = false;
     private float timer= 0.0f;
     public float timeShield;
     public float shieldCoolDown;
@@ -17,7 +18,15 @@ public class Shield : MonoBehaviour
 
 
 
+    void Start()
+    {
 
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+    }
     // Update is called once per frame
     private void Update()
     {
@@ -30,7 +39,7 @@ public class Shield : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (Input.GetButtonDown("Shield") && enable == true && unlock == true) // Si le bouton correspondant au bouclier est apuyé et que le cool down de la compétecnce est fini
+        if (Input.GetButtonDown("Shield") && enable == true && unlockShield == true) // Si le bouton correspondant au bouclier est apuyé et que le cool down de la compétecnce est fini
         {
             activate();
         }
@@ -58,5 +67,18 @@ public class Shield : MonoBehaviour
     public float getTime()
     {
         return timeShield;
+    }
+
+    public void makeTrueShield()
+    {
+        if (!unlockShield)
+        {
+            unlockShield = true;
+        }
+    }
+
+    public void ifDeathResetShield()
+    {
+        unlockShield = false;
     }
 }

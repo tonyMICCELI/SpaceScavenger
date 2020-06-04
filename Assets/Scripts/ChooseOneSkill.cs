@@ -27,4 +27,10 @@ public class ChooseOneSkill : MonoBehaviour
         PlayerController.instance.makeTrueAccel();
         Destroy(canvaSkills);
     }
+
+    public void Bouclier()
+    {
+        Shield.instance.makeTrueShield();
+        Destroy(canvaSkills);
+    }
 }

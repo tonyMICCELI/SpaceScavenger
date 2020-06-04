@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 00a8f47b5a35ee242954835a70c39ac2, type: 3}
-    volume: 0.02
+    volume: 0.03
     pitch: 1
     loop: 1
     source: {fileID: 0}

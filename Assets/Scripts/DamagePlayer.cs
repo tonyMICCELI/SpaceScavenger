@@ -55,5 +55,6 @@ public class DamagePlayer : MonoBehaviour
     {
         PlayerController.instance.ifDeathResetSkills();
         ScoreManager.instance.ifDeathResetSettings();
+        Shield.instance.ifDeathResetShield();
     }
 }

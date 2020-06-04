@@ -24,7 +24,10 @@ public class ScoreManager : MonoBehaviour
     public int winConditionLevel0;
     public int winCondition;
     public int winCondition2;
-    public string level;
+    public string switchLevel1;
+    public string switchLlevel2;
+    public string switchLlevel3;
+    public string switchWin;
     public bool level0 = true;
     public bool level1, level2, level3 = false;
     public bool isFull = false;
@@ -155,7 +158,7 @@ public class ScoreManager : MonoBehaviour
                 level1 = true;
                 ResetScores();
                 SettingsLevel1();
-                SceneManager.LoadScene(level);                                
+                SceneManager.LoadScene(switchLevel1);                                
             }
         }
 
@@ -168,7 +171,7 @@ public class ScoreManager : MonoBehaviour
                 level2 = true;
                 ResetScores();
                 SettingsLevel2();
-                SceneManager.LoadScene(level);
+                SceneManager.LoadScene(switchLlevel2);
             }
         }
     }
@@ -204,7 +207,7 @@ public class ScoreManager : MonoBehaviour
 
     public void SettingsLevel1()
     {
-        winConditionLevel0 = 1;
+        winConditionLevel0 = 100;
         winCondition = 8;
         winCondition2 = 5;
         textMetal.text = scoreObject.ToString() + " / " + winCondition.ToString();
@@ -218,7 +221,7 @@ public class ScoreManager : MonoBehaviour
 
     public void SettingsLevel2()
     {
-        winConditionLevel0 = 1;
+        winConditionLevel0 = 100;
         winCondition = 11;
         winCondition2 = 7;
         textMetal.text = scoreObject.ToString() + " / " + winCondition.ToString();
