@@ -10,10 +10,12 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Queue<string> sentences;
     public Canvas canvaDialogue;
+    private bool activeDialog = false;
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        activeDialog = true;
     }
 
     public void StartDialogue (Dialogue dialogue)
@@ -59,5 +61,10 @@ public class DialogueManager : MonoBehaviour
     {
         Destroy(canvaDialogue);
         Debug.Log("Fin dialogue");
+        activeDialog = false;
+    }
+    public bool get_active()
+    {
+        return activeDialog;
     }
 }
