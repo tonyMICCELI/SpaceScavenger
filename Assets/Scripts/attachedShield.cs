@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class attachedShield : MonoBehaviour
 {
-
+    // public Shield shield;
     public float timeShield;
+
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject,timeShield );
+        Destroy(gameObject,timeShield);
     }
 }

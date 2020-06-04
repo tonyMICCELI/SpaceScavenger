@@ -13,6 +13,15 @@ TagManager:
   - Satellite
   - Monster
   - Weapon
+  - MonsterShoot
+  - Border
+  - Shield
+  - Cigaret
+  - SkillTurbo
+  - SkillDash
+  - Boss
+  - Missile
+  - EngineLight
   layers:
   - Default
   - TransparentFX

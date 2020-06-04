@@ -5,16 +5,21 @@ using UnityEngine;
 public class hitEffect_missile : MonoBehaviour
 {
     public GameObject impact; //annimation d'impact
+    public GameObject shield;
 
     private void Update()
     {
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 2f);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Shield"))
+        {
+            Physics2D.IgnoreCollision(shield.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
         }
         else
         {

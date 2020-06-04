@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     public float moveSpeed;
     private float timer = 0.0f;
     public float timeAcceleration;
@@ -13,12 +14,25 @@ public class PlayerController : MonoBehaviour
     public Vector2 MousePos;
     public float accelCoolDown;
     private bool enableAccel = true;
+    private bool unlockAccel = false;
     public bool enableDash = true;
+    private bool unlockDash = false;
     public float dashCoolDown = 5f;
     public Animator engine;
-    private Vector2 isMoving = new Vector2(0.01f, 0.01f);
-    
+    public MoveBack moveBack;
+    public boss boss;
 
+
+
+    void Start()
+    {
+        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        
+    }
 
     // Update is called once per frame
     void Update()
@@ -28,22 +42,35 @@ public class PlayerController : MonoBehaviour
         MousePos = cam.ScreenToWorldPoint(Input.mousePosition); //récupère les coordonnées de la souris sur l'écran et les convertie en coordonnées unity 
         engine.SetFloat("SpeedX", Mathf.Abs(movement.x*moveSpeed));
         engine.SetFloat("SpeedY", Mathf.Abs(movement.y*moveSpeed));
-
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); //Met à jour la position du vaisseau 
-        
+        if(moveBack)
+        {
+            if (moveBack.get_cloose() == true)
+            {
+                Vector2 bossPos = boss.get_rb().position;
+                rb.MovePosition(rb.position - (bossPos - rb.position) * 10 * moveSpeed * Time.fixedDeltaTime);
+            }
+            else
+            {
+                rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); //Met à jour la position du vaisseau 
+            }
+        }
+        else
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); //Met à jour la position du vaisseau 
+        }
         Vector2 lookDir = MousePos - rb.position; //Vecteur entre le vaisseau et le pointeur de souris, soit la direction ou doit poiter le nez du vaisseau
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //angle angle entre l'axe horizontal et lookdir, correspondant à la direction dans laquelle doit etre le vaisseau
         rb.rotation = angle; //rotation du vaisseau = angle entre l'axe horizontal et lookdir
-        if (Input.GetButtonDown("Acceleration") && enableAccel == true) // Si le bouton correspondant à l'acceleration est apuyé et que le cool down de la compétecnce est fini
+        if (Input.GetButtonDown("Acceleration") && enableAccel == true && unlockAccel == true) // Si le bouton correspondant à l'acceleration est apuyé et que le cool down de la compétecnce est fini
         {
             acceleration();
         }
         timerAcceleration();
-        if (Input.GetButtonDown("Dash") && enableDash == true)
+        if (Input.GetButtonDown("Dash") && enableDash == true && unlockDash == true)
         {
             dash();
         }
@@ -53,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D objCollider)
     {
-        if (objCollider.gameObject.CompareTag("Metal") || objCollider.gameObject.CompareTag("testObject") || objCollider.gameObject.CompareTag("Wheel")
+        if (objCollider.gameObject.CompareTag("Metal") || objCollider.gameObject.CompareTag("Cigaret") || objCollider.gameObject.CompareTag("Wheel")
             || objCollider.gameObject.CompareTag("Panel") || objCollider.gameObject.CompareTag("Plastic") 
             || objCollider.gameObject.CompareTag("Gas") || objCollider.gameObject.CompareTag("Satellite"))
         {
@@ -100,6 +127,28 @@ public class PlayerController : MonoBehaviour
         {
             enableDash = true;
         }
+    }
+
+    public void makeTrueDash()
+    {
+        if (!unlockDash)
+        {
+            unlockDash = true;
+        }
+    }
+
+    public void makeTrueAccel()
+    {
+        if (!unlockAccel)
+        {
+            unlockAccel = true;
+        }
+    }
+
+    public void ifDeathResetSkills()
+    {
+        unlockAccel = false;
+        unlockDash = false;
     }
 }
 
