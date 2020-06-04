@@ -50,7 +50,7 @@ MonoBehaviour:
   textGas: {fileID: 0}
   textPlastic: {fileID: 0}
   textSatellite: {fileID: 0}
-  winConditionLevel0: 0
+  winConditionLevel0: 1
   winCondition: 10
   winCondition2: 5
   level: WinScene

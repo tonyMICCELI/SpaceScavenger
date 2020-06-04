@@ -10,7 +10,6 @@ public class DamagePlayer : MonoBehaviour
     public float MonsterDamage;
 
     public HealthBar healthBar;
-
     public string level;
 
 
@@ -24,7 +23,9 @@ public class DamagePlayer : MonoBehaviour
     {
         if(life<0)
         {
+            ifDeathResetAll();
             SceneManager.LoadScene(level);
+
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -43,5 +44,11 @@ public class DamagePlayer : MonoBehaviour
             life -= 1f;
             healthBar.setHealth(life);
         }
+    }
+
+    public void ifDeathResetAll()
+    {
+        PlayerController.instance.ifDeathResetSkills();
+        ScoreManager.instance.ifDeathResetSettings();
     }
 }

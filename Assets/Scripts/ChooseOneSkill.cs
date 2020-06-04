@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChooseOneSkill : MonoBehaviour
 {
-    public Canvas canvaSkills;
+    public GameObject canvaSkills;
     // Start is called before the first frame update
     void Start()
     {

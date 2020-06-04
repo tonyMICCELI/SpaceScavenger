@@ -38,8 +38,10 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+        //dialogueText.text = sentence;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        
     }
 
     IEnumerator TypeSentence (string sentence)
@@ -52,6 +54,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
+
     void EndDialogue()
     {
         Destroy(canvaDialogue);
