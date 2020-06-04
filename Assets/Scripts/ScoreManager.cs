@@ -32,6 +32,7 @@ public class ScoreManager : MonoBehaviour
     public bool level1, level2, level3 = false;
     public bool isFull = false;
     public TextMeshProUGUI goBackHome;
+    public string whatSkills1;
     public GameObject playerWinner;
     // Start is called before the first frame update
     void Start()
@@ -44,15 +45,21 @@ public class ScoreManager : MonoBehaviour
         {
             SettingsLevel0();
         }
-
-        
+        goBackHome.text = "";
     }
 
     private void Update()
     {
         winTheLevel();
-        FullItems();
+        if (level0 == true) { 
+            FullItemsLevel0();
+        }
+        if ((level1 || level2) == true)
+        {
+            FullItemsLevel12();
+        }
         GoHome();
+        ChoiceLevel1();
     }
     public void ChangeScoreMetal()
     {
@@ -170,9 +177,30 @@ public class ScoreManager : MonoBehaviour
                 level1 = false;
                 level2 = true;
                 ResetScores();
+                SettingsLevel2();                
+                SceneManager.LoadScene(switchLlevel2);
+                GivingSkillsNextLevel();
+            }
+        }
+
+        if (level2 == true)
+        {
+            GivingSkillsNextLevel();
+            if (isFull && CheckHome.instance.GetBool())
+            {
+                isFull = false;
+                level2 = false;
+                level3 = true;
+                ResetScores();
                 SettingsLevel2();
                 SceneManager.LoadScene(switchLlevel2);
+                GivingSkillsNextLevel();
             }
+        }
+
+        if (level3 == true)
+        {
+            GivingSkillsNextLevel();
         }
     }
     void Awake()
@@ -208,8 +236,8 @@ public class ScoreManager : MonoBehaviour
     public void SettingsLevel1()
     {
         winConditionLevel0 = 100;
-        winCondition = 8;
-        winCondition2 = 5;
+        winCondition = 1;
+        winCondition2 = 1;
         textMetal.text = scoreObject.ToString() + " / " + winCondition.ToString();
         textWheel.text = scoreWheel.ToString() + " / " + winCondition.ToString();
         textObject.text = scoreMetal.ToString() + " / " + winCondition.ToString();
@@ -233,20 +261,41 @@ public class ScoreManager : MonoBehaviour
         textSatellite.text = scoreSatellite.ToString() + " / " + winCondition2.ToString();
     }
 
-    public void FullItems()
+    public void SettingsLevel3()
+    {
+        winConditionLevel0 = 100;
+        winCondition = 110;
+        winCondition2 = 700;
+        textMetal.text = "";
+        textWheel.text = "";
+        textObject.text = "";
+        textPanel.text = "";
+        textGas.text = "";
+        textPlastic.text = "";
+        textSatellite.text = "";
+    }
+
+    public void FullItemsLevel0()
     {
         if (scoreObject >= winConditionLevel0 && scoreWheel >= winConditionLevel0 && scoreMetal >= winConditionLevel0
             && scorePanel >= winConditionLevel0
             && scoreGas >= winConditionLevel0 && scorePlastic >= winConditionLevel0 && scoreSatellite >= winConditionLevel0) 
         {
             isFull = true;
+            goBackHome.text = "RETOUR VAISSEAU";
         }
 
+        
+    }
+
+    public void FullItemsLevel12()
+    {
         if (scoreObject >= winCondition && scoreWheel >= winCondition && scoreMetal >= winCondition
             && scorePanel >= winCondition
             && scoreGas >= winCondition2 && scorePlastic >= winCondition2 && scoreSatellite >= winCondition2)
         {
             isFull = true;
+            goBackHome.text = "RETOUR VAISSEAU";
         }
     }
 
@@ -290,11 +339,45 @@ public class ScoreManager : MonoBehaviour
     {
         if (isFull)
         {
-            goBackHome.transform.position = new Vector3(playerWinner.transform.position.x, playerWinner.transform.position.y + 1.25f, 0f);
+            goBackHome.text = "RETOUR VAISSEAU";
         }
-        if (!isFull)
+        else
         {
-            goBackHome.transform.position = new Vector3(800f, 800f, 0f);
+            goBackHome.text = "";
+        }
+    }
+
+    public void ChoiceLevel1()
+    {
+        if (PlayerController.instance.getAccelState())
+        {
+            whatSkills1 = "Turbo";
+        }
+        else if (PlayerController.instance.getDashState())
+        {
+            whatSkills1 = "Dash";
+        }
+    }
+
+    public void GivingSkillsNextLevel()
+    {
+        if (whatSkills1 == "Turbo")
+        {
+            PlayerController.instance.makeTrueAccel();
+            if (level3)
+            {
+                Shield.instance.makeTrueShield();
+            }
+        }
+        else if (whatSkills1 == "Dash")
+        {
+            PlayerController.instance.makeTrueDash();
+            if (level3)
+            {
+                Shield.instance.makeTrueShield();
+            }
         }
     }
 }
+
+    

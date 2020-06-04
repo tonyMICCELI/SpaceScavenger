@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 MousePos;
     public float accelCoolDown;
     private bool enableAccel = true;
-    private bool unlockAccel = false;
+    public bool unlockAccel = false;
     public bool enableDash = true;
     private bool unlockDash = false;
     public float dashCoolDown = 5f;
@@ -149,6 +149,16 @@ public class PlayerController : MonoBehaviour
     {
         unlockAccel = false;
         unlockDash = false;
+    }
+
+    public bool getAccelState()
+    {
+        return unlockAccel;
+    }
+
+    public bool getDashState()
+    {
+        return unlockDash;
     }
 }
 
