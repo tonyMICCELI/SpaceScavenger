@@ -29,7 +29,8 @@ public class Laser : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Laser");
         GameObject laser = Instantiate(laserPrefab, firePoint.position, firePoint.rotation); // on créé un laser, son apparence est laserPrefab, il est créé a la position du firePoint, et à l'angle du firePoint
         GameObject laser1 = Instantiate(laserPrefab, firePoint1.position, firePoint1.rotation);
-
+        Physics2D.IgnoreCollision(laser.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(laser1.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         Rigidbody2D rb = laser.GetComponent<Rigidbody2D>(); //on prend leur Rigidbody pour gérer les colisions
         Rigidbody2D rb1 = laser1.GetComponent<Rigidbody2D>();
 

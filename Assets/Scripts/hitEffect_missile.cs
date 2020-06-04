@@ -13,10 +13,6 @@ public class hitEffect_missile : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
         if (collision.gameObject.CompareTag("Shield"))
         {
             Physics2D.IgnoreCollision(shield.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
