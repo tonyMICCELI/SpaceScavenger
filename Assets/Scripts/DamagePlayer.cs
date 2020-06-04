@@ -36,7 +36,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Monster"))
         {
-            life -= MonsterDamage * Time.deltaTime;
+            life -= (MonsterDamage * Time.deltaTime)/4f;
             healthBar.setHealth(life);
         }
     }

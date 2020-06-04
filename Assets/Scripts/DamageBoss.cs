@@ -34,7 +34,7 @@ public class DamageBoss : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Missile"))
         {
-            life -= 2f;
+            life -= 5f;
             healthBar.setHealth(life);
         }
     }

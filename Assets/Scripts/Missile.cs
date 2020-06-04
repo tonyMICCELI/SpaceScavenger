@@ -9,19 +9,22 @@ public class Missile : MonoBehaviour
     public GameObject missilePrefab;
     public GameObject missilePrefab1;
     private bool isActive = false;
-
+    private float timer = 0.0f;
+    public float timeShoot;
+    private bool enable = true;
 
     public float missileSpeed;
     void Update()
     {
-        if (Input.GetButtonDown("Missile") && isActive == true)//si le bouton associé a Missile est appuyé
+        if (Input.GetButtonDown("Missile") && isActive == true && enable == true)//si le bouton associé a Missile est appuyé
         {
-            FindObjectOfType<AudioManager>().Play("Rocket");
             missile();
         }
+        timerShoot();
     }
     void missile()
     {
+        FindObjectOfType<AudioManager>().Play("Rocket");
         GameObject missile = Instantiate(missilePrefab, missileLauncher.position, missileLauncher.rotation);// on créé un missile, son apparence est missilePrefab, il est créé a la position du missileLauncher, et à l'angle du missileLauncher
         GameObject missile1 = Instantiate(missilePrefab1, missileLauncher1.position, missileLauncher1.rotation);
 
@@ -30,5 +33,15 @@ public class Missile : MonoBehaviour
 
         rb.AddForce(missileLauncher.up * missileSpeed, ForceMode2D.Impulse); // on leur donne une vitesse
         rb1.AddForce(missileLauncher1.up * missileSpeed, ForceMode2D.Impulse);
+        timer = 0.0f;
+        enable = false;
+    }
+    void timerShoot() //gère le temps de la compétence et le cool down
+    {
+        timer += Time.deltaTime; //le timer compte le temps passé 
+        if (timer > timeShoot)
+        {
+            enable = true;
+        }
     }
 }

@@ -7,23 +7,26 @@ public class Laser : MonoBehaviour
     public Transform firePoint;
     public Transform firePoint1;
     public GameObject laserPrefab;
+    private float timer = 0.0f;
+    public float timeShoot;
+    private bool enable =true;
 
     public float bulletForce;
     public PauseMenu pauseMenu;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")&& pauseMenu.getBool() ==false) //si le bouton associé a Fire1 est appuyé
+        if (Input.GetButtonDown("Fire1")&& pauseMenu.getBool() ==false && enable == true) //si le bouton associé a Fire1 est appuyé
         {
-            FindObjectOfType<AudioManager>().Play("Laser");
             shoot();
         }
-        
+        timerShoot();
     }
    
 
     void shoot()
     {
+        FindObjectOfType<AudioManager>().Play("Laser");
         GameObject laser = Instantiate(laserPrefab, firePoint.position, firePoint.rotation); // on créé un laser, son apparence est laserPrefab, il est créé a la position du firePoint, et à l'angle du firePoint
         GameObject laser1 = Instantiate(laserPrefab, firePoint1.position, firePoint1.rotation);
 
@@ -32,6 +35,16 @@ public class Laser : MonoBehaviour
 
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse); // on leur donne une vitesse
         rb1.AddForce(firePoint1.up * bulletForce, ForceMode2D.Impulse);
+        timer = 0.0f;
+        enable = false;
     }
-    
+    void timerShoot() //gère le temps de la compétence et le cool down
+    {
+        timer += Time.deltaTime; //le timer compte le temps passé 
+        if (timer > timeShoot)
+        {
+            enable = true;
+        }
+    }
+
 }
