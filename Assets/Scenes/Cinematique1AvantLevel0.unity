@@ -1163,6 +1163,12 @@ Transform:
   m_Father: {fileID: 2144329909}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!223 &1777141255 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 133497028167855762, guid: 208390a21789e8947b54db90a1c1edcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 133497026681842553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1837787520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1380,6 +1386,83 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: C'EST TOI LA RECRUE ? J'ESPERE QUE TES PRET ! ON A DU BOULOT !
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: NOTRE MISSION EST SIMPLE, ON RAMASSE LES DECHETS DES HUMAINS DANS LA
+        ZONE ET ON SE TIRE !
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: C'EST TA PREMIERE MISSION ALORS JE VAIS TE GUIDER UN PEU ! C'EST PARTI
+        !
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: SALUT3
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594645, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594645, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594645, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594645, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497027073934593, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: canvaDialogue
+      value: 
+      objectReference: {fileID: 1777141255}
+    - target: {fileID: 133497028035198023, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 133497028167855761, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
       propertyPath: m_Name

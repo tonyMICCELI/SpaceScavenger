@@ -27,7 +27,9 @@ public class ScoreManager : MonoBehaviour
     public string level;
     public bool level0 = true;
     public bool level1, level2, level3 = false;
-
+    public bool isFull = false;
+    public TextMeshProUGUI goBackHome;
+    public GameObject playerWinner;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,8 @@ public class ScoreManager : MonoBehaviour
     private void Update()
     {
         winTheLevel();
+        FullItems();
+        GoHome();
     }
     public void ChangeScoreMetal()
     {
@@ -144,15 +148,27 @@ public class ScoreManager : MonoBehaviour
     {
         if (level0 == true)
         {
-            if (scoreObject >= winConditionLevel0 && scoreWheel >= winConditionLevel0 && scoreMetal >= winConditionLevel0 
-            && scorePanel >= winConditionLevel0
-            && scoreGas >= winConditionLevel0 && scorePlastic >= winConditionLevel0 && scoreSatellite >= winConditionLevel0 && CheckHome.instance.GetBool() )
+            if (isFull && CheckHome.instance.GetBool() )
             {
+                isFull = false;
                 level0 = false;
                 level1 = true;
                 ResetScores();
                 SettingsLevel1();
                 SceneManager.LoadScene(level);                                
+            }
+        }
+
+        if (level1 == true)
+        {
+            if (isFull && CheckHome.instance.GetBool())
+            {
+                isFull = false;
+                level1 = false;
+                level2 = true;
+                ResetScores();
+                SettingsLevel2();
+                SceneManager.LoadScene(level);
             }
         }
     }
@@ -174,6 +190,7 @@ public class ScoreManager : MonoBehaviour
 
     public void SettingsLevel0()
     {
+        winConditionLevel0 = 1;
         winCondition = 10;
         winCondition2 = 5;
         textMetal.text = scoreObject.ToString() + " / " + winConditionLevel0.ToString();
@@ -187,8 +204,8 @@ public class ScoreManager : MonoBehaviour
 
     public void SettingsLevel1()
     {
-        winConditionLevel0 = 500;
-        winCondition = 10;
+        winConditionLevel0 = 1;
+        winCondition = 8;
         winCondition2 = 5;
         textMetal.text = scoreObject.ToString() + " / " + winCondition.ToString();
         textWheel.text = scoreWheel.ToString() + " / " + winCondition.ToString();
@@ -201,8 +218,8 @@ public class ScoreManager : MonoBehaviour
 
     public void SettingsLevel2()
     {
-        winConditionLevel0 = 500;
-        winCondition = 13;
+        winConditionLevel0 = 1;
+        winCondition = 11;
         winCondition2 = 7;
         textMetal.text = scoreObject.ToString() + " / " + winCondition.ToString();
         textWheel.text = scoreWheel.ToString() + " / " + winCondition.ToString();
@@ -211,6 +228,23 @@ public class ScoreManager : MonoBehaviour
         textGas.text = scoreGas.ToString() + " / " + winCondition2.ToString();
         textPlastic.text = scorePlastic.ToString() + " / " + winCondition2.ToString();
         textSatellite.text = scoreSatellite.ToString() + " / " + winCondition2.ToString();
+    }
+
+    public void FullItems()
+    {
+        if (scoreObject >= winConditionLevel0 && scoreWheel >= winConditionLevel0 && scoreMetal >= winConditionLevel0
+            && scorePanel >= winConditionLevel0
+            && scoreGas >= winConditionLevel0 && scorePlastic >= winConditionLevel0 && scoreSatellite >= winConditionLevel0) 
+        {
+            isFull = true;
+        }
+
+        if (scoreObject >= winCondition && scoreWheel >= winCondition && scoreMetal >= winCondition
+            && scorePanel >= winCondition
+            && scoreGas >= winCondition2 && scorePlastic >= winCondition2 && scoreSatellite >= winCondition2)
+        {
+            isFull = true;
+        }
     }
 
     public void ResetScores()
@@ -237,5 +271,27 @@ public class ScoreManager : MonoBehaviour
     public bool GetBoolLevel3()
     {
         return level2;
+    }
+
+    public void ifDeathResetSettings()
+    {
+        level0 = true;
+        level1 = false;
+        level2 = false;
+        level3 = false;
+        ResetScores();
+        SettingsLevel0();
+    }
+
+    public void GoHome() 
+    {
+        if (isFull)
+        {
+            goBackHome.transform.position = new Vector3(playerWinner.transform.position.x, playerWinner.transform.position.y + 1.25f, 0f);
+        }
+        if (!isFull)
+        {
+            goBackHome.transform.position = new Vector3(800f, 800f, 0f);
+        }
     }
 }

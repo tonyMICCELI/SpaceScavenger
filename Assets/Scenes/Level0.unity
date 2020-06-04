@@ -742,6 +742,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4f795035635c23429a096b151e35626, type: 3}
+--- !u!1 &371987063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8976602009057244994, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040548285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &381111848
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +829,125 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &493992091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745728, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968288178659745735, guid: eea1298d0e623d44d93b17f34f0ddc1b,
+        type: 3}
+      propertyPath: m_Name
+      value: Menu pause
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eea1298d0e623d44d93b17f34f0ddc1b, type: 3}
 --- !u!114 &499664718 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 133497026427204576, guid: 208390a21789e8947b54db90a1c1edcc,
@@ -1794,6 +1919,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 973096810}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1234541064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 459699281547852023, guid: facfd0ea5d46cba47a89c7d5a5dc6def,
+    type: 3}
+  m_PrefabInstance: {fileID: 708015108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1312136949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2184,6 +2321,18 @@ PrefabInstance:
     - target: {fileID: 916280052, guid: fb934e189d4bd5b41a253e753208ce80, type: 3}
       propertyPath: player
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 916280052, guid: fb934e189d4bd5b41a253e753208ce80, type: 3}
+      propertyPath: goBackHome
+      value: 
+      objectReference: {fileID: 1234541064}
+    - target: {fileID: 916280052, guid: fb934e189d4bd5b41a253e753208ce80, type: 3}
+      propertyPath: playerWinner
+      value: 
+      objectReference: {fileID: 371987063}
+    - target: {fileID: 916280052, guid: fb934e189d4bd5b41a253e753208ce80, type: 3}
+      propertyPath: isFull
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7761142883267947768, guid: fb934e189d4bd5b41a253e753208ce80,
         type: 3}
@@ -2801,6 +2950,12 @@ PrefabInstance:
       objectReference: {fileID: 681516271}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25d54aa55bf3229408c44ee2bae95b44, type: 3}
+--- !u!1 &1746972968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7761142885029889929, guid: fb934e189d4bd5b41a253e753208ce80,
+    type: 3}
+  m_PrefabInstance: {fileID: 1431643770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1812434151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8998211897254426548, guid: 8c7519e46c61cdd45aa5e72aad70b7f6,
@@ -3012,6 +3167,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 464473692063090854, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1746972968}
     - target: {fileID: 1495583847370658920, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
         type: 3}
       propertyPath: cam
@@ -3174,7 +3334,7 @@ PrefabInstance:
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
@@ -3184,53 +3344,83 @@ PrefabInstance:
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
       value: 'TU PEUX TIRER AVEC CLIQUE GAUCHE, CA FAIT PIOU-PIOU C''EST COOL HEIN
         ? '
       objectReference: {fileID: 0}
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[2]
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
       value: JE SAIS, POUR RAMASSER DES DECHETS CA SERT A RIEN. MAAAAAAIS ON SAIT
         JAMAIS.........
       objectReference: {fileID: 0}
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[3]
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
       value: AU BOULOT MAINTENANT ! LES VAISSEAUX ONT UN MECANISME SUPER COOL QUI
         ATTRAPE TOUT LES DECHETS QU'IL TOUCHE !
       objectReference: {fileID: 0}
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[4]
-      value: 'VAS-Y ! RECOLTE LE PNEU QUI TRAINE DANS LE COIN ! '
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[5]
+      propertyPath: dialogue.sentences.Array.data[8]
+      value: VAS-Y ! RECOLTE LE PNEU QUI TRAINE DANS LE COIN !
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[9]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[10]
       value: PARFAIT ! SIMPLISSIME ! SI LES HUMAINS AVAIENT COMPRIS CA, IL Y A 100
         ANS, ILS SERAIENT PEUT-ETRE ENCORE LA POUR EN PARLER...
       objectReference: {fileID: 0}
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[6]
+      propertyPath: dialogue.sentences.Array.data[11]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[12]
       value: COMME TU PEUX VOIR, LE NOMBRE D'OJBET QUE TU RAMASSES EST INSCRIT EN
         HAUT A GAUCHE.
       objectReference: {fileID: 0}
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[7]
+      propertyPath: dialogue.sentences.Array.data[13]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[14]
       value: JUSTEMENT, POUR VOIR SI T'AS COMPRIS CHERCHE UN OBJET DE CHAQUE TYPE
         ET REVIENS AU VAISSEAU MERE ! A TOI DE JOUER !
       objectReference: {fileID: 0}
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[8]
-      value: 'VAS-Y ! RECOLTE LE PNEU QUI TRAINE DANS LE COIN ! '
-      objectReference: {fileID: 0}
-    - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[9]
-      value: 'VAS-Y ! RECOLTE LE PNEU QUI TRAINE DANS LE COIN ! '
+      propertyPath: dialogue.sentences.Array.data[15]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 133497026427204576, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}

@@ -21,6 +21,7 @@ public class motherShipMoving : MonoBehaviour
         rb.transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
         if (rb.transform.position.y == target.position.y)
         {
+
             SceneManager.LoadScene(level);
         }
     }

@@ -26,10 +26,12 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        
         if (instance == null)
         {
             instance = this;
         }
+        
     }
 
     // Update is called once per frame
@@ -141,6 +143,12 @@ public class PlayerController : MonoBehaviour
         {
             unlockAccel = true;
         }
+    }
+
+    public void ifDeathResetSkills()
+    {
+        unlockAccel = false;
+        unlockDash = false;
     }
 }
 
