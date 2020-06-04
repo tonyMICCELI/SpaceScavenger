@@ -831,7 +831,7 @@ Transform:
   - {fileID: 1228970538}
   - {fileID: 938584299}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &434981305
 PrefabInstance:
@@ -1191,6 +1191,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7072833497195981238, guid: 5b497a50bf79b6f4cabd9701448fe25f,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1577571436}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b497a50bf79b6f4cabd9701448fe25f, type: 3}
 --- !u!20 &625738731 stripped
@@ -1212,6 +1217,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376872825}
     m_Modifications:
+    - target: {fileID: 2380952676721996379, guid: 114f4570d1792054d8a820f9648337de,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1577571436}
     - target: {fileID: 7445381400893813780, guid: 114f4570d1792054d8a820f9648337de,
         type: 3}
       propertyPath: m_Name
@@ -1494,7 +1504,7 @@ PrefabInstance:
     - target: {fileID: 2588245648497632546, guid: c447e5c8f31f4644f863de077153fe13,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2588245648497632546, guid: c447e5c8f31f4644f863de077153fe13,
         type: 3}
@@ -1668,7 +1678,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &863912213
 PrefabInstance:
@@ -2178,7 +2188,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &938584299 stripped
 Transform:
@@ -2972,7 +2982,7 @@ Transform:
   m_Children:
   - {fileID: 1923657864}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1282020139
 PrefabInstance:
@@ -3606,7 +3616,7 @@ Transform:
   - {fileID: 268531967}
   - {fileID: 2003158719}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1517288307 stripped
 Transform:
@@ -3875,7 +3885,7 @@ PrefabInstance:
     - target: {fileID: 2579767171614136974, guid: 6577f16caf5c94e4ab40ac85e0dd82a4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2579767171614136974, guid: 6577f16caf5c94e4ab40ac85e0dd82a4,
         type: 3}
@@ -4123,7 +4133,7 @@ PrefabInstance:
     - target: {fileID: 7726520010826397635, guid: 3481cbfa15f2b0b4c86e3da65bfc9e4f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7726520010826397635, guid: 3481cbfa15f2b0b4c86e3da65bfc9e4f,
         type: 3}
@@ -4531,6 +4541,11 @@ PrefabInstance:
       propertyPath: canvaDialogue
       value: 
       objectReference: {fileID: 5401499}
+    - target: {fileID: 133497027073934593, guid: 208390a21789e8947b54db90a1c1edcc,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1579117992}
     - target: {fileID: 133497027437656466, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -4599,7 +4614,7 @@ PrefabInstance:
     - target: {fileID: 133497028167855765, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 133497028167855765, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
@@ -4830,6 +4845,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 348111876620452965, guid: 786f658d76991f343b27ecd5be97bfa9,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1577571436}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786f658d76991f343b27ecd5be97bfa9, type: 3}
 --- !u!1 &2115184524 stripped
@@ -4862,6 +4882,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonsterPlastic
       objectReference: {fileID: 0}
+    - target: {fileID: 7273725378613577385, guid: 92db201d01aad014bb971bbc08b486ab,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1577571436}
     - target: {fileID: 7273725378613577390, guid: 92db201d01aad014bb971bbc08b486ab,
         type: 3}
       propertyPath: m_LocalPosition.x

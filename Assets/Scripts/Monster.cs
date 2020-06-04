@@ -14,6 +14,7 @@ public class Monster : MonoBehaviour
     public Transform firePoint;
     public GameObject shootPrefab;
     public float bulletForce;
+    public DialogueManager dialogueManager;
 
 
 
@@ -27,7 +28,6 @@ public class Monster : MonoBehaviour
     void Update()
     {
         moving();
-        
     }
 
     public void moving()
@@ -45,8 +45,11 @@ public class Monster : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("Monster");
             rb.velocity = new Vector2(0.0f, 0.0f);
-            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-            shoot();
+            if(dialogueManager.get_active()==false)
+            {
+                target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+                shoot();
+            }
         } 
     }
     public Transform get_target()
@@ -66,9 +69,12 @@ public class Monster : MonoBehaviour
 
     public void patrol()
     {
-        xrnd = Random.Range(-xlim, xlim);
-        yrnd = Random.Range(-ylim, ylim);
-        rb.velocity = new Vector2(xrnd*moveSpeed/2, yrnd*moveSpeed/2);
+        if(dialogueManager.get_active()==false)
+        {
+            xrnd = Random.Range(-xlim, xlim);
+            yrnd = Random.Range(-ylim, ylim);
+            rb.velocity = new Vector2(xrnd * moveSpeed / 2, yrnd * moveSpeed / 2);
+        }
     }
     
     public virtual IEnumerator patrolRoutine()
