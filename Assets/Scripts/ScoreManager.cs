@@ -192,8 +192,8 @@ public class ScoreManager : MonoBehaviour
                 level2 = false;
                 level3 = true;
                 ResetScores();
-                SettingsLevel2();
-                SceneManager.LoadScene(switchLlevel2);
+                SettingsLevel3();
+                SceneManager.LoadScene(switchLlevel3);
                 GivingSkillsNextLevel();
             }
         }
@@ -201,6 +201,14 @@ public class ScoreManager : MonoBehaviour
         if (level3 == true)
         {
             GivingSkillsNextLevel();
+            if (!DamageBoss.instance.GetBool())
+            {
+                level3 = false;
+                level0 = true;
+                ResetScores();
+                SettingsLevel0();
+                SceneManager.LoadScene(switchWin);
+            }
         }
     }
     void Awake()
@@ -250,8 +258,8 @@ public class ScoreManager : MonoBehaviour
     public void SettingsLevel2()
     {
         winConditionLevel0 = 100;
-        winCondition = 11;
-        winCondition2 = 7;
+        winCondition = 1;
+        winCondition2 = 1;
         textMetal.text = scoreObject.ToString() + " / " + winCondition.ToString();
         textWheel.text = scoreWheel.ToString() + " / " + winCondition.ToString();
         textObject.text = scoreMetal.ToString() + " / " + winCondition.ToString();
