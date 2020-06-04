@@ -21,6 +21,7 @@ TagManager:
   - SkillDash
   - Boss
   - Missile
+  - EngineLight
   layers:
   - Default
   - TransparentFX

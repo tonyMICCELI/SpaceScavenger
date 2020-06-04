@@ -20,8 +20,11 @@ public class EngineLight : MonoBehaviour
             enable = true;
             Destroy(runningLight);
         }
-        
-        runningLight.transform.position = Vector3.Lerp(enginePos.position, enginePos.position, Time.deltaTime / 10);
+        if (GameObject.FindWithTag("EngineLight") != null)
+        {
+            runningLight.transform.position = Vector3.Lerp(enginePos.position, enginePos.position, Time.deltaTime / 10f);
+
+        }
 
     }
     void activate()

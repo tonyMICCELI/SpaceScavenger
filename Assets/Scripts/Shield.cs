@@ -9,7 +9,7 @@ public class Shield : MonoBehaviour
     public GameObject target;
     private Vector3 targetPosition;
     private bool enable = true;
-    private bool unlock = false;
+    private bool unlock = true;
     private float timer= 0.0f;
     public float timeShield;
     public float shieldCoolDown;
@@ -21,7 +21,12 @@ public class Shield : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Physics2D.IgnoreCollision(shield.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        if (GameObject.FindWithTag("Shield") != null)
+        {
+            Physics2D.IgnoreCollision(shield.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+
+        
     }
     void FixedUpdate()
     {
@@ -30,8 +35,10 @@ public class Shield : MonoBehaviour
             activate();
         }
         timer1();
-        shield.transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime/10f);
-        
+        if(GameObject.FindWithTag("Shield") != null)
+        {
+            shield.transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime / 10f);
+        }    
     }
     void activate()
     {
