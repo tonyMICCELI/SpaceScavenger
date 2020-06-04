@@ -33,4 +33,16 @@ public class ChooseOneSkill : MonoBehaviour
         Shield.instance.makeTrueShield();
         Destroy(canvaSkills);
     }
+
+    public void Life()
+    {
+        DamagePlayer.instance.makeTrueLife();
+        Destroy(canvaSkills);
+    }
+
+    public void Rocket()
+    {
+        Missile.instance.MakeTrueRocket();
+        Destroy(canvaSkills);
+    }
 }
