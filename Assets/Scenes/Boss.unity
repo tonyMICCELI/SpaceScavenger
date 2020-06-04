@@ -202,12 +202,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 1346830236}
+      objectReference: {fileID: 0}
     - target: {fileID: 970503664755052302, guid: 6e381042e57217542b9ab757e982dd3f,
         type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 1346830236}
+      objectReference: {fileID: 0}
     - target: {fileID: 970503664755052303, guid: 6e381042e57217542b9ab757e982dd3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1719,12 +1719,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c447e5c8f31f4644f863de077153fe13, type: 3}
---- !u!4 &1346830236 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2085853891398862734, guid: 5126a8d3e1e9a8f42a5d0cf325b25cee,
-    type: 3}
-  m_PrefabInstance: {fileID: 3491092257208045198}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1409862004 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2024181900190710535, guid: a05ba34aaf58e3d46bc563256ce32d2d,
@@ -1863,6 +1857,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c7519e46c61cdd45aa5e72aad70b7f6, type: 3}
+--- !u!114 &1640657958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 133497027073934593, guid: 208390a21789e8947b54db90a1c1edcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 789023429}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4054d7be4cd1692458f9879d97dabcce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1673349619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2800,6 +2806,11 @@ PrefabInstance:
       propertyPath: damageBoss
       value: 
       objectReference: {fileID: 1704779939}
+    - target: {fileID: 2024181900215554617, guid: a05ba34aaf58e3d46bc563256ce32d2d,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1640657958}
     - target: {fileID: 2024181900215554623, guid: a05ba34aaf58e3d46bc563256ce32d2d,
         type: 3}
       propertyPath: life
