@@ -8,6 +8,7 @@ public class DamagePlayer : MonoBehaviour
     public float life;
     public float maxLife;
     public float MonsterDamage;
+    private bool lifeUpgrade = false;
 
     public HealthBar healthBar;
 
@@ -16,6 +17,10 @@ public class DamagePlayer : MonoBehaviour
 
     private void Start()
     {
+        if(lifeUpgrade ==true)
+        {
+            maxLife = maxLife * 2;
+        }
         life = maxLife;
         healthBar.setMaxHealth(maxLife);
     }

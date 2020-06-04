@@ -8,12 +8,13 @@ public class Missile : MonoBehaviour
     public Transform missileLauncher1;
     public GameObject missilePrefab;
     public GameObject missilePrefab1;
+    private bool isActive = false;
 
 
     public float missileSpeed;
     void Update()
     {
-        if (Input.GetButtonDown("Missile"))//si le bouton associé a Missile est appuyé
+        if (Input.GetButtonDown("Missile") && isActive == true)//si le bouton associé a Missile est appuyé
         {
             FindObjectOfType<AudioManager>().Play("Rocket");
             missile();

@@ -9,7 +9,7 @@ public class Shield : MonoBehaviour
     public GameObject target;
     private Vector3 targetPosition;
     private bool enable = true;
-    private bool unlock = true;
+    private bool unlock = false;
     private float timer= 0.0f;
     public float timeShield;
     public float shieldCoolDown;
