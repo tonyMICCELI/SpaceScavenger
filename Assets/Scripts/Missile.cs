@@ -36,7 +36,8 @@ public class Missile : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Rocket");
         GameObject missile = Instantiate(missilePrefab, missileLauncher.position, missileLauncher.rotation);// on créé un missile, son apparence est missilePrefab, il est créé a la position du missileLauncher, et à l'angle du missileLauncher
         GameObject missile1 = Instantiate(missilePrefab1, missileLauncher1.position, missileLauncher1.rotation);
-
+        Physics2D.IgnoreCollision(missile.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(missile1.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         Rigidbody2D rb = missile.GetComponent<Rigidbody2D>(); //on en fait des Rigidbody pour gérer les colisions
         Rigidbody2D rb1 = missile1.GetComponent<Rigidbody2D>();
 
