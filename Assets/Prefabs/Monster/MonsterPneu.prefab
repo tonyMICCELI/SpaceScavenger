@@ -125,7 +125,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348111876620452954}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -240,9 +240,7 @@ MonoBehaviour:
   shootPrefab: {fileID: 6086341822446863450, guid: c39d955ce14527c4aa045d152cb75d36,
     type: 3}
   bulletForce: 3
-  monsterCollider: {fileID: 348111876620452967}
-  shootCollider: {fileID: 3646559843605455370, guid: c39d955ce14527c4aa045d152cb75d36,
-    type: 3}
+  dialogueManager: {fileID: 0}
 --- !u!114 &348111876620452964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,8 +253,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1a0cb3feda21648be2e8e2da6aed57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detecMonster: {fileID: 348111876620452966}
-  laser: {fileID: 5479489060889423224, guid: 1fce4d70d8ecb9a4fa16bad353865299, type: 3}
-  missile: {fileID: 811729837892656799, guid: 8668b039c9d51f546bd8ea0f3c54ad0f, type: 3}
   item: {fileID: 4682116547785637531, guid: 1bdcdefb439a401468af62dd4b4cfd37, type: 3}
   impact: {fileID: 2902347825406084010, guid: c88338dd2c589ab419709e41ad5ae589, type: 3}

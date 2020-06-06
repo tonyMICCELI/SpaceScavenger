@@ -38,6 +38,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
+        ScoreManager.instance.ifDeathResetSettings();
         SceneManager.LoadScene("MainMenu");
     }
     public void QuitGame()

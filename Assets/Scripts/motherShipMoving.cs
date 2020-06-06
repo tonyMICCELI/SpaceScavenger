@@ -13,6 +13,7 @@ public class motherShipMoving : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        FindObjectOfType<AudioManager>().Play("Mother");
     }
 
     // Update is called once per frame
@@ -23,6 +24,11 @@ public class motherShipMoving : MonoBehaviour
         {
 
             SceneManager.LoadScene(level);
+        }
+        else if (!DialogueManager.instance.get_active()) 
+        {
+
+            moveSpeed += moveSpeed*0.1f;
         }
     }
 }
