@@ -98,3 +98,21 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Boss
+    clip: {fileID: 8300000, guid: 216cafb3beb6f00428718e597d0c2008, type: 3}
+    volume: 0.17
+    pitch: 2.38
+    loop: 0
+    source: {fileID: 0}
+  - name: Over
+    clip: {fileID: 8300000, guid: e17dc6b9df29acc41bd16e58e7ae0106, type: 3}
+    volume: 0.17
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Over2
+    clip: {fileID: 8300000, guid: a08704ccb8933fd4a8a58d5a727b4619, type: 3}
+    volume: 0.17
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

@@ -21,6 +21,7 @@ public class boss : Monster
     {
         if (playerCollider.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("Boss");
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             shoot(firePoint);
             shoot(firePoint2);

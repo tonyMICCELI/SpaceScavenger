@@ -3508,7 +3508,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.sentences.Array.data[6]
       value: AU BOULOT MAINTENANT ! LES VAISSEAUX ONT UN MECANISME SUPER COOL QUI
-        ATTRAPE TOUT LES DECHETS QU'IL TOUCHE !
+        ATTRAPE TOUT LES DECHETS QU'ILS TOUCHENT !
       objectReference: {fileID: 0}
     - target: {fileID: 133497026137594642, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}

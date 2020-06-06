@@ -35,12 +35,14 @@ public class DamageBoss : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
+            FindObjectOfType<AudioManager>().Play("Boss");
             life -= 1f;
             healthBar.setHealth(life);
         }
         if(collision.gameObject.CompareTag("Missile"))
         {
-            life -= 5f;
+            FindObjectOfType<AudioManager>().Play("Boss");
+            life -= 3f;
             healthBar.setHealth(life);
         }
     }
@@ -48,5 +50,10 @@ public class DamageBoss : MonoBehaviour
     public bool GetBool()
     {
         return isAlive;
+    }
+
+    public void SetAlive()
+    {
+        isAlive = true;
     }
 }

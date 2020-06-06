@@ -29,6 +29,8 @@ public class DamagePlayer : MonoBehaviour
     {
         if(life<0)
         {
+            FindObjectOfType<AudioManager>().Play("Over2");
+            FindObjectOfType<AudioManager>().Play("Over");
             ifDeathResetAll();
             SceneManager.LoadScene(level);
 

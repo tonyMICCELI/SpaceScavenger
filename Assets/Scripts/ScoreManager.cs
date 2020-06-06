@@ -44,6 +44,7 @@ public class ScoreManager : MonoBehaviour
         if (level0 == true)
         {
             SettingsLevel0();
+
         }
         goBackHome.text = "";
     }
@@ -193,6 +194,7 @@ public class ScoreManager : MonoBehaviour
                 level3 = true;
                 ResetScores();
                 SettingsLevel3();
+                
                 SceneManager.LoadScene(switchLlevel3);
                 GivingSkillsNextLevel();
             }
@@ -244,8 +246,8 @@ public class ScoreManager : MonoBehaviour
     public void SettingsLevel1()
     {
         winConditionLevel0 = 100;
-        winCondition = 1;
-        winCondition2 = 1;
+        winCondition = 8;
+        winCondition2 = 6;
         textMetal.text = scoreObject.ToString() + " / " + winCondition.ToString();
         textWheel.text = scoreWheel.ToString() + " / " + winCondition.ToString();
         textObject.text = scoreMetal.ToString() + " / " + winCondition.ToString();
@@ -258,8 +260,8 @@ public class ScoreManager : MonoBehaviour
     public void SettingsLevel2()
     {
         winConditionLevel0 = 100;
-        winCondition = 1;
-        winCondition2 = 1;
+        winCondition = 11;
+        winCondition2 = 7;
         textMetal.text = scoreObject.ToString() + " / " + winCondition.ToString();
         textWheel.text = scoreWheel.ToString() + " / " + winCondition.ToString();
         textObject.text = scoreMetal.ToString() + " / " + winCondition.ToString();
