@@ -12,11 +12,13 @@ public class Laser : MonoBehaviour
     private bool enable =true;
 
     public float bulletForce;
+
     public PauseMenu pauseMenu;
+    public DialogueManager dialogueManager;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")&& pauseMenu.getBool() ==false && enable == true) //si le bouton associé a Fire1 est appuyé
+        if (Input.GetButtonDown("Fire1")&& pauseMenu.getBool() ==false && enable == true && dialogueManager.get_active() == false) //si le bouton associé a Fire1 est appuyé
         {
             shoot();
         }

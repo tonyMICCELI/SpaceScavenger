@@ -62,5 +62,6 @@ MonoBehaviour:
   level2: 0
   level3: 0
   isFull: 0
-  goBackHome: {fileID: 0}
+  goBackHome: {fileID: 223315448454312883, guid: 31d9a82fc10a14e4586780cc5bf1df7e,
+    type: 3}
   playerWinner: {fileID: 0}

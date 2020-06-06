@@ -46,13 +46,13 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 00a8f47b5a35ee242954835a70c39ac2, type: 3}
-    volume: 0.03
+    volume: 0.035
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Collect
     clip: {fileID: 8300000, guid: 07e2010084ef6244b9b5460d8bcc5244, type: 3}
-    volume: 0.265
+    volume: 0.309
     pitch: 1.96
     loop: 0
     source: {fileID: 0}
@@ -70,19 +70,49 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Launching
     clip: {fileID: 8300000, guid: 5da76f4ad7b45b545ba975c66b4e262a, type: 3}
-    volume: 0.48
+    volume: 0.315
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Monster
     clip: {fileID: 8300000, guid: 80741c0eca2ddb24b8ed714ded1f04f1, type: 3}
-    volume: 0.265
+    volume: 0.281
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Dialogue
     clip: {fileID: 8300000, guid: 792c08cff496fa346b34816c6cb42022, type: 3}
-    volume: 0.121
+    volume: 0.154
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Skill
+    clip: {fileID: 8300000, guid: 497eac6c711e8bf47982e0d8b6cb68ac, type: 3}
+    volume: 0.17
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Mother
+    clip: {fileID: 8300000, guid: 497eac6c711e8bf47982e0d8b6cb68ac, type: 3}
+    volume: 0.17
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Boss
+    clip: {fileID: 8300000, guid: 216cafb3beb6f00428718e597d0c2008, type: 3}
+    volume: 0.17
+    pitch: 2.38
+    loop: 0
+    source: {fileID: 0}
+  - name: Over
+    clip: {fileID: 8300000, guid: e17dc6b9df29acc41bd16e58e7ae0106, type: 3}
+    volume: 0.17
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Over2
+    clip: {fileID: 8300000, guid: a08704ccb8933fd4a8a58d5a727b4619, type: 3}
+    volume: 0.17
     pitch: 1
     loop: 0
     source: {fileID: 0}

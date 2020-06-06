@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Missile : MonoBehaviour
 {
+    public static Missile instance;
     public Transform missileLauncher;
     public Transform missileLauncher1;
     public GameObject missilePrefab;
@@ -14,6 +15,14 @@ public class Missile : MonoBehaviour
     private bool enable = true;
 
     public float missileSpeed;
+
+    void Start()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
     void Update()
     {
         if (Input.GetButtonDown("Missile") && isActive == true && enable == true)//si le bouton associé a Missile est appuyé
@@ -44,5 +53,10 @@ public class Missile : MonoBehaviour
         {
             enable = true;
         }
+    }
+
+    public void MakeTrueRocket()
+    {
+        isActive = true;
     }
 }

@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class DamageBoss : MonoBehaviour
 {
+    public static DamageBoss instance;
     public GameObject impact;
     public float life;
     public float maxLife;
     public HealthBar healthBar;
-    private GameObject deadBoss;
+    public bool isAlive = true;
 
 
     private void Start()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
         life = maxLife;
         healthBar.setMaxHealth(maxLife);
     }
@@ -20,6 +25,7 @@ public class DamageBoss : MonoBehaviour
     {
         if (life < 0)
         {
+            isAlive = false;
             GameObject effect = Instantiate(impact, transform.position, Quaternion.identity);//on instancie l'annimation à l'endroit de la colision
             Destroy(effect, 1f);// on détruit l'annimation après 1 seconde
             Destroy(gameObject);
@@ -29,13 +35,25 @@ public class DamageBoss : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
+            FindObjectOfType<AudioManager>().Play("Boss");
             life -= 1f;
             healthBar.setHealth(life);
         }
         if(collision.gameObject.CompareTag("Missile"))
         {
-            life -= 5f;
+            FindObjectOfType<AudioManager>().Play("Boss");
+            life -= 3f;
             healthBar.setHealth(life);
         }
+    }
+
+    public bool GetBool()
+    {
+        return isAlive;
+    }
+
+    public void SetAlive()
+    {
+        isAlive = true;
     }
 }

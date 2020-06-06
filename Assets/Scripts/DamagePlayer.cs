@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DamagePlayer : MonoBehaviour
 {
+    public static DamagePlayer instance;
     public float life;
     public float maxLife;
     public float MonsterDamage;
@@ -16,9 +17,9 @@ public class DamagePlayer : MonoBehaviour
 
     private void Start()
     {
-        if(lifeUpgrade ==true)
+        if (instance == null)
         {
-            maxLife = maxLife * 2;
+            instance = this;
         }
         life = maxLife;
         healthBar.setMaxHealth(maxLife);
@@ -28,9 +29,18 @@ public class DamagePlayer : MonoBehaviour
     {
         if(life<0)
         {
+            FindObjectOfType<AudioManager>().Play("Over2");
+            FindObjectOfType<AudioManager>().Play("Over");
             ifDeathResetAll();
             SceneManager.LoadScene(level);
 
+        }
+        if (lifeUpgrade == true)
+        {
+            maxLife = maxLife * 2;
+            life = maxLife;
+            healthBar.setMaxHealth(maxLife);
+            lifeUpgrade = false;
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -50,7 +60,10 @@ public class DamagePlayer : MonoBehaviour
             healthBar.setHealth(life);
         }
     }
-
+    public void makeTrueLife()
+    {
+        lifeUpgrade = true;
+    }
     public void ifDeathResetAll()
     {
         PlayerController.instance.ifDeathResetSkills();
