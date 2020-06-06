@@ -6,14 +6,19 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager instance; 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public Queue<string> sentences;
-    public Canvas canvaDialogue;
+    public GameObject canvaDialogue;
     private bool activeDialog = false;
     // Start is called before the first frame update
     void Start()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
         sentences = new Queue<string>();
         activeDialog = true;
     }

@@ -2429,12 +2429,6 @@ PrefabInstance:
       objectReference: {fileID: 681516271}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8068fad55c5605c44a76b50259fc8050, type: 3}
---- !u!223 &1383281209 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 133497028167855762, guid: 208390a21789e8947b54db90a1c1edcc,
-    type: 3}
-  m_PrefabInstance: {fileID: 2124940690}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1407098029
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,7 +3622,7 @@ PrefabInstance:
         type: 3}
       propertyPath: canvaDialogue
       value: 
-      objectReference: {fileID: 1383281209}
+      objectReference: {fileID: 2124940691}
     - target: {fileID: 133497027437656466, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -3766,6 +3760,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208390a21789e8947b54db90a1c1edcc, type: 3}
+--- !u!1 &2124940691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 133497028167855761, guid: 208390a21789e8947b54db90a1c1edcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2124940690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2144704319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6566785593762426176, guid: cb71c07cbbfc8f346b56699c224ecc29,

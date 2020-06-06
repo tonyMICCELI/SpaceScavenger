@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!223 &5401499 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 133497028167855762, guid: 208390a21789e8947b54db90a1c1edcc,
-    type: 3}
-  m_PrefabInstance: {fileID: 2025141084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5401500 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 133497028167855765, guid: 208390a21789e8947b54db90a1c1edcc,
@@ -1042,6 +1036,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1513404510}
     m_Modifications:
+    - target: {fileID: 4585040486975528287, guid: 8d156bc0fd4a37d4993fc3fa7a928597,
+        type: 3}
+      propertyPath: glolight
+      value: 
+      objectReference: {fileID: 887768871}
+    - target: {fileID: 4585040486975528287, guid: 8d156bc0fd4a37d4993fc3fa7a928597,
+        type: 3}
+      propertyPath: textOver
+      value: 
+      objectReference: {fileID: 344123092}
     - target: {fileID: 6556549027259234819, guid: 8d156bc0fd4a37d4993fc3fa7a928597,
         type: 3}
       propertyPath: textOver
@@ -1196,6 +1200,11 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1577571436}
+    - target: {fileID: 7072833497195981239, guid: 5b497a50bf79b6f4cabd9701448fe25f,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 913162716}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b497a50bf79b6f4cabd9701448fe25f, type: 3}
 --- !u!20 &625738731 stripped
@@ -1282,6 +1291,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9117974327404953015, guid: 114f4570d1792054d8a820f9648337de,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1343544308}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 114f4570d1792054d8a820f9648337de, type: 3}
 --- !u!1 &681107111 stripped
@@ -4540,7 +4554,7 @@ PrefabInstance:
         type: 3}
       propertyPath: canvaDialogue
       value: 
-      objectReference: {fileID: 5401499}
+      objectReference: {fileID: 2025141085}
     - target: {fileID: 133497027073934593, guid: 208390a21789e8947b54db90a1c1edcc,
         type: 3}
       propertyPath: pauseMenu
@@ -4683,6 +4697,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208390a21789e8947b54db90a1c1edcc, type: 3}
+--- !u!1 &2025141085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 133497028167855761, guid: 208390a21789e8947b54db90a1c1edcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2025141084}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2071138349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5066923272302062192, guid: 22a2c34056f7bff458edf2e04d936704,
@@ -4845,6 +4865,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 348111876620452964, guid: 786f658d76991f343b27ecd5be97bfa9,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1090627529}
     - target: {fileID: 348111876620452965, guid: 786f658d76991f343b27ecd5be97bfa9,
         type: 3}
       propertyPath: dialogueManager
@@ -4882,6 +4907,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonsterPlastic
       objectReference: {fileID: 0}
+    - target: {fileID: 7273725378613577384, guid: 92db201d01aad014bb971bbc08b486ab,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 770296495}
     - target: {fileID: 7273725378613577385, guid: 92db201d01aad014bb971bbc08b486ab,
         type: 3}
       propertyPath: dialogueManager

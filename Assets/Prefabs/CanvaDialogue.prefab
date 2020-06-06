@@ -654,6 +654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 133497026427204576}
   dialogueText: {fileID: 133497027684116880}
+  canvaDialogue: {fileID: 133497028167855761}
 --- !u!1 &133497027145626682
 GameObject:
   m_ObjectHideFlags: 0

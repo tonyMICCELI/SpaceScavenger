@@ -95,7 +95,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7072833497195981225}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -145,6 +145,7 @@ MonoBehaviour:
   shootPrefab: {fileID: 5067919440757001138, guid: f4c69a5aef4ecd44fb35eb8e8b28c375,
     type: 3}
   bulletForce: 3
+  dialogueManager: {fileID: 0}
 --- !u!114 &7072833497195981239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,9 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1a0cb3feda21648be2e8e2da6aed57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detecMonster: {fileID: 7072833497195981237}
-  laser: {fileID: 5479489060889423224, guid: 1fce4d70d8ecb9a4fa16bad353865299, type: 3}
-  missile: {fileID: 811729837892656799, guid: 8668b039c9d51f546bd8ea0f3c54ad0f, type: 3}
   item: {fileID: 7300453866238233370, guid: 8068fad55c5605c44a76b50259fc8050, type: 3}
   impact: {fileID: 2902347825406084010, guid: c88338dd2c589ab419709e41ad5ae589, type: 3}
 --- !u!60 &7072833497195981224

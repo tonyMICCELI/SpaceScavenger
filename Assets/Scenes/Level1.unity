@@ -1077,6 +1077,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7072833497195981238, guid: 5b497a50bf79b6f4cabd9701448fe25f,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1687765266}
+    - target: {fileID: 7072833497195981239, guid: 5b497a50bf79b6f4cabd9701448fe25f,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1512187068}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b497a50bf79b6f4cabd9701448fe25f, type: 3}
 --- !u!4 &211085124 stripped
@@ -1161,6 +1171,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1153572619}
     m_Modifications:
+    - target: {fileID: 2380952676721996379, guid: 114f4570d1792054d8a820f9648337de,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1687765266}
     - target: {fileID: 7445381400893813780, guid: 114f4570d1792054d8a820f9648337de,
         type: 3}
       propertyPath: m_Name
@@ -1221,6 +1236,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9117974327404953015, guid: 114f4570d1792054d8a820f9648337de,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1701092818}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 114f4570d1792054d8a820f9648337de, type: 3}
 --- !u!1001 &240935469
@@ -2146,9 +2166,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208390a21789e8947b54db90a1c1edcc, type: 3}
---- !u!223 &601948043 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 133497028167855762, guid: 208390a21789e8947b54db90a1c1edcc,
+--- !u!1 &601948043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 133497028167855761, guid: 208390a21789e8947b54db90a1c1edcc,
     type: 3}
   m_PrefabInstance: {fileID: 601948042}
   m_PrefabAsset: {fileID: 0}
@@ -2393,6 +2413,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonsterPlastic
       objectReference: {fileID: 0}
+    - target: {fileID: 7273725378613577384, guid: 92db201d01aad014bb971bbc08b486ab,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1944910973}
+    - target: {fileID: 7273725378613577385, guid: 92db201d01aad014bb971bbc08b486ab,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1687765266}
     - target: {fileID: 7273725378613577390, guid: 92db201d01aad014bb971bbc08b486ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2792,6 +2822,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 348111876620452964, guid: 786f658d76991f343b27ecd5be97bfa9,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1759501214}
+    - target: {fileID: 348111876620452965, guid: 786f658d76991f343b27ecd5be97bfa9,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1687765266}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786f658d76991f343b27ecd5be97bfa9, type: 3}
 --- !u!1001 &924489232
@@ -3996,6 +4036,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 860559900}
     m_Modifications:
+    - target: {fileID: 4585040486975528287, guid: 8d156bc0fd4a37d4993fc3fa7a928597,
+        type: 3}
+      propertyPath: glolight
+      value: 
+      objectReference: {fileID: 240935471}
+    - target: {fileID: 4585040486975528287, guid: 8d156bc0fd4a37d4993fc3fa7a928597,
+        type: 3}
+      propertyPath: textOver
+      value: 
+      objectReference: {fileID: 94691297}
     - target: {fileID: 6556549027259234819, guid: 8d156bc0fd4a37d4993fc3fa7a928597,
         type: 3}
       propertyPath: textOver
@@ -4250,7 +4300,7 @@ PrefabInstance:
     - target: {fileID: 5996936073446898330, guid: 55e6b2d7c2edfb64c8ccfca9f7241d05,
         type: 3}
       propertyPath: m_Name
-      value: Spawner
+      value: spawnRdmDecor
       objectReference: {fileID: 0}
     - target: {fileID: 5996936073446898331, guid: 55e6b2d7c2edfb64c8ccfca9f7241d05,
         type: 3}
